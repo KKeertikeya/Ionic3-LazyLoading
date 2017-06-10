@@ -7,6 +7,6 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content>
-  <message></message>
+<ion-content class="pageBackground">
+  <message *ngFor="let message of messages"></message>
 </ion-content>
