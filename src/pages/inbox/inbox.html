@@ -1,12 +1,48 @@
-<ion-header>
+<ion-header color="secondary">
   <ion-navbar>
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
     <ion-title>Inbox</ion-title>
+
+    <button ion-button>Filters</button>
   </ion-navbar>
 </ion-header>
 
 <ion-content class="pageBackground">
-  <message *ngFor="let message of messages"></message>
+  <ion-item>
+    <ion-input type="text" placeholder="Filter" [(ngModel)]='filteredPlatform'></ion-input>
+  </ion-item>
+
+
+
+  <ion-card *ngFor='let message of messages | filter:filteredPlatform:"platform"'>
+    
+    <ion-card-header style="padding: 0px 0px 0px 2px; color: aliceblue" [style.background]='message.color'>
+      <composer-summary 
+        style="font-size: 1.4em"
+        [senderName] = 'message.sender'
+        [senderType] = 'message.senderType'
+      >
+      </composer-summary>
+    </ion-card-header>
+    
+    <ion-card-content style="padding: 0">
+      <composer-detail
+        [image] = 'message.image'
+        [senderName] = 'message.sender'
+        [messageDate] = 'message.messageDate | date'
+      >
+      </composer-detail>
+      
+      <hr style="margin: 0 16px 5px 16px">
+      
+      <post-content
+        [text] = 'message.text' 
+      >
+      </post-content>
+      
+    </ion-card-content>
+    <facebook-message-action-buttons></facebook-message-action-buttons>
+  </ion-card>
 </ion-content>
