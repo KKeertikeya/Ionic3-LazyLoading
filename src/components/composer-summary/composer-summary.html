@@ -2,6 +2,15 @@
  
 <ion-icon name="logo-facebook"></ion-icon>
 {{ senderName }} {{ senderType }}
-<button ion-button icon-only clear color="light" small style="margin:0; float:right">
+<button 
+    ion-button 
+    icon-only 
+    clear 
+    color="light" 
+    small 
+    float-right 
+    no-margin
+    (click)="showCheckbox()"
+>
   <ion-icon item-end name="ios-pricetag"></ion-icon>
 </button>

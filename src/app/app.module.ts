@@ -6,6 +6,7 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 import { InboxPage } from '../pages/inbox/inbox';
+import { InboxFiltersPage } from '../pages/inbox-filters/inbox-filters'
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -23,6 +24,7 @@ import { InboxFilter } from './inboxFilter.pipe';
     HomePage,
     ListPage,
     InboxPage,
+    InboxFiltersPage,
     ComposerDetailComponent,
     ComposerSummaryComponent,
     FacebookMessageActionButtonsComponent,
@@ -40,7 +42,8 @@ import { InboxFilter } from './inboxFilter.pipe';
     MyApp,
     HomePage,
     ListPage,
-    InboxPage
+    InboxPage,
+    InboxFiltersPage
   ],
   providers: [
     StatusBar,

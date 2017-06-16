@@ -18,7 +18,7 @@ export class InboxFilter implements PipeTransform{
         const result = [];
 
         for (const item of value) {
-            if (item[propertyName] === filterString) {
+            if (item[propertyName].toString().startsWith(filterString)) {
                 result.push(item);
             }
         }

@@ -1,5 +1,9 @@
 import { Component } from '@angular/core';
+
 import { NavController } from 'ionic-angular';
+
+import { InboxFiltersPage } from '../inbox-filters/inbox-filters';
+
 
 @Component({
   selector: 'page-inbox',
@@ -61,5 +65,9 @@ export class InboxPage {
 
   constructor(public navCtrl: NavController) {
 
+  }
+
+  goToFilters() {
+    this.navCtrl.push(InboxFiltersPage);
   }
 }
