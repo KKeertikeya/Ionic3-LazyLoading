@@ -1,4 +1,4 @@
-export interface Data {
+export interface DataInterface {
     sender: string,
     senderType: string,
     messageDate: Date,

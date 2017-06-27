@@ -1,16 +1,16 @@
 import { NgModule } from '@angular/core';
 import { IonicPageModule } from 'ionic-angular';
-import { ListPage } from './list';
+import { RowPipe } from './row.pipe';
 
 @NgModule({
   declarations: [
-    ListPage,
+    RowPipe
   ],
   imports: [
-    IonicPageModule.forChild(ListPage),
+    IonicPageModule.forChild(RowPipe),
   ],
   exports: [
-    ListPage
+    RowPipe
   ]
 })
-export class ListPageModule {}
+export class RowPipeModule {}

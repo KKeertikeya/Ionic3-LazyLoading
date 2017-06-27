@@ -1,4 +1,5 @@
 export interface TypeFilter {
     platform: string,
-    type: string
+    type: string,
+    icon: string
 }

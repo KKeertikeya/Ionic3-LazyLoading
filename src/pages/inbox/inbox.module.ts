@@ -10,7 +10,8 @@ import { FacebookCommentActionButtonsComponentModule } from '../../components/fa
 import { FacebookMessageActionButtonsComponentModule } from '../../components/facebook-message-action-buttons/facebook-message-action-buttons.module';
 import { PostContentComponentModule } from '../../components/post-content/post-content.module'
 
-import { InboxFilterPipeModule } from '../../pipes/inboxFilterPipe.module';
+import { InboxSearchPipeModule } from '../../pipes/inboxSearchPipe.module';
+// import { InboxSearch } from '../../pipes/inboxSearch.pipe';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { InboxFilterPipeModule } from '../../pipes/inboxFilterPipe.module';
     IonicPageModule.forChild(InboxPage),
     InboxFiltersPageModule,
     ComposerSummaryComponentModule,
-    InboxFilterPipeModule,
+    InboxSearchPipeModule,
+    // InboxSearch,
     ComposerDetailComponentModule,
     FacebookCommentActionButtonsComponentModule,
     FacebookMessageActionButtonsComponentModule,

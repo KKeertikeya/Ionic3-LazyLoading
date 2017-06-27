@@ -66,66 +66,82 @@ export default {
             platform: 'google plus'
         }
     ],
+
     types: [
         {
             platform: 'facebook',
-            type: 'comment'
+            type: 'comment',
+            icon: 'logo-facebook'
         },
         {
             platform: 'facebook',
-            type: 'ad comment'
+            type: 'ad comment',
+            icon: 'logo-facebook'
         },
         {
             platform: 'facebook',
-            type: 'likes'
+            type: 'likes',
+            icon: 'logo-facebook'
         },
         {
             platform: 'facebook',
-            type: 'shares'
+            type: 'shares',
+            icon: 'logo-facebook'
         },
         {
             platform: 'facebook',
-            type: 'others'
+            type: 'others',
+            icon: 'logo-facebook'
         },
         {
             platform: 'facebook',
-            type: 'write on wall'
+            type: 'write on wall',
+            icon: 'logo-facebook'
         },
         {
             platform: 'facebook',
-            type: 'direct message'
+            type: 'direct message',
+            icon: 'logo-facebook'
         },
         {
             platform: 'facebook',
-            type: 'reviews'
+            type: 'reviews',
+            icon: 'logo-facebook'
         },
         {
             platform: 'twitter',
-            type: 'new followers'
+            type: 'new followers',
+            icon: 'logo-twitter'
         },
         {
             platform: 'twitter',
-            type: 'direct message'
+            type: 'direct message',
+            icon: 'logo-twitter'
         },
         {
             platform: 'twitter',
-            type: 'mentions'
+            type: 'mentions',
+            icon: 'logo-twitter'
         },
         {
             platform: 'twitter',
-            type: 'retweets'
+            type: 'retweets',
+            icon: 'logo-twitter'
         },
         {
             platform: 'linkedin',
-            type: 'company comment'
+            type: 'company comment',
+            icon: 'logo-linkedin'
         },
         {
-            platform: 'google plus',
-            type: 'page comment'
+            platform: 'googlePlus',
+            type: 'page comment',
+            icon: 'logo-googleplus'
         },
         {
             platform: 'instagram',
-            type: 'comments'
+            type: 'comments',
+            icon: 'logo-instagram'
         }
     ],
     tags: [

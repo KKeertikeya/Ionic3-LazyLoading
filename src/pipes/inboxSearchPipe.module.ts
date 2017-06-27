@@ -1,16 +1,16 @@
 import { NgModule } from '@angular/core';
 import { IonicPageModule } from 'ionic-angular';
-import { InboxFilter } from './inboxFilter.pipe';
+import { InboxSearch } from './inboxSearch.pipe';
 
 @NgModule({
   declarations: [
-    InboxFilter,
+    InboxSearch
   ],
   imports: [
-    IonicPageModule.forChild(InboxFilter),
+    IonicPageModule.forChild(InboxSearch),
   ],
   exports: [
-    InboxFilter
+    InboxSearch
   ]
 })
-export class InboxFilterPipeModule {}
+export class InboxSearchPipeModule {}

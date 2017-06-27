@@ -3,10 +3,10 @@ import { NavController, NavParams, IonicPage } from 'ionic-angular';
 
 @IonicPage()
 @Component({
-  selector: 'page-list',
-  templateUrl: 'list.html'
+  selector: 'page-publishing',
+  templateUrl: 'publishing.html'
 })
-export class ListPage {
+export class PublishingPage {
   selectedItem: any;
   icons: string[];
   items: Array<{title: string, note: string, icon: string}>;
@@ -31,7 +31,7 @@ export class ListPage {
 
   itemTapped(event, item) {
     // That's right, we're pushing to ourselves!
-    this.navCtrl.push(ListPage, {
+    this.navCtrl.push(PublishingPage, {
       item: item
     });
   }

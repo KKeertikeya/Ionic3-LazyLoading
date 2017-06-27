@@ -17,7 +17,7 @@
 
 
 
-  <ion-card *ngFor='let message of messages | filter:filteredPlatform:"platform"'>
+  <ion-card *ngFor='let message of messages | search:filteredPlatform: "platform": "sender": "text"'>
     
     <ion-card-header style="padding: 0px 0px 0px 2px; color: aliceblue" [style.background]='message.color'>
       <composer-summary 

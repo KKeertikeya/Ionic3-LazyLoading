@@ -7,11 +7,62 @@
 </ion-header>
 
 
-<ion-content padding>
-  <ion-list no-lines>
-    <ion-item *ngFor="let item of items">
-      <ion-label>{{ item }}</ion-label>
-      <ion-toggle checked="false"></ion-toggle>
-    </ion-item> 
-  </ion-list>
+<ion-content no-padding>
+
+  <ion-item-divider color="light">
+    <ion-toggle checked="true" item-start></ion-toggle>
+    <ion-label> Profiles</ion-label>
+  </ion-item-divider>
+
+  <ion-row *ngFor="let profiles of filterData.profiles | rowPipe:2 | slice:0:1" col-12 no-padding no-margin style="padding: 0px 8px">
+    <ion-col *ngFor="let profiles of filterData.profiles; let i = index" col-6 no-padding no-margin>
+      <ion-item no-padding no-margin *ngIf="i < 6">
+        <ion-label color="dark">
+          {{ profiles.profileName }}
+        </ion-label>
+        <ion-toggle enabled checked="false"></ion-toggle>
+      </ion-item>
+    </ion-col>
+  </ion-row>
+
+  <div no-padding>
+    <ion-segment [(ngModel)]="showMoreProfiles" *ngIf="filterData.profiles.length > 6">
+      <ion-segment-button value="moreProfiles">
+        Show More
+      </ion-segment-button>
+    </ion-segment>
+  </div>
+
+
+  <ion-item-divider color="light">
+    <ion-toggle checked="true" item-start></ion-toggle>
+    <ion-label>Accout type</ion-label>
+  </ion-item-divider>
+
+  <ion-row *ngFor="let type of filterData.types | rowPipe:2 | slice:0:1" col-12 no-padding no-margin style="padding: 0px 8px">
+    <ion-col *ngFor="let type of filterData.types; let i = index" col-6 no-padding no-margin>
+      <ion-item no-padding no-margin>
+        <ion-label no-padding no-margin stacked>
+          <ion-icon [name]='type.icon' [color]='type.platform' item-left no-padding no-margin></ion-icon>
+          {{ type.type }}
+        </ion-label>
+        <ion-toggle enabled checked="false"></ion-toggle>
+      </ion-item>
+    </ion-col>
+  </ion-row>
+
+  <!-- <div no-padding>
+    <ion-segment [(ngModel)]="showMoreProfiles" *ngIf="filterData.profiles.length > 6">
+      <ion-segment-button value="moreProfiles">
+        Show More
+      </ion-segment-button>
+    </ion-segment>
+  </div> -->
+
+
+
+
+
+
+
 </ion-content>
