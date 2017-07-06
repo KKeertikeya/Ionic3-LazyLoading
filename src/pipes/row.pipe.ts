@@ -9,6 +9,7 @@ export class RowPipe implements PipeTransform {
         for (let i = 0; i < value.length; i += perRow) {
             rows.push(value.slice(i, i + perRow))
         }
+        console.log("-------------In Rows Pipe--------------");
         console.log(rows);
         return rows;
     }

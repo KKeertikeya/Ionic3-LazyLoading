@@ -3,67 +3,80 @@ export default {
         {
             profileName: 'Kotomatrix',
             profileType: 'page',
-            platform: 'facebook'
+            platform: 'facebook',
+            selected: false
         },
         {
             profileName: 'LadyGaga',
             profileType: 'page',
-            platform: 'facebook'
+            platform: 'facebook',
+            selected: false
         },
         {
             profileName: 'Mytestpage',
             profileType: 'page',
-            platform: 'facebook'
+            platform: 'facebook',
+            selected: false
         },
         {
             profileName: 'Ron Cedar',
             profileType: 'page',
-            platform: 'facebook'
+            platform: 'facebook',
+            selected: false
         },
         {
             profileName: 'Ronit-test',
             profileType: 'page',
-            platform: 'facebook'
+            platform: 'facebook',
+            selected: false
         },
         {
             profileName: 'eclincher_social',
             profileType: 'page',
-            platform: 'instagram'
+            platform: 'instagram',
+            selected: false
         },
         {
             profileName: 'play1app',
             profileType: 'user',
-            platform: 'instagram'
+            platform: 'instagram',
+            selected: false
         },
         {
             profileName: 'RonCedar',
             profileType: 'user',
-            platform: 'twitter'
+            platform: 'twitter',
+            selected: false
         },
         {
             profileName: 'Ronitf',
             profileType: 'user',
-            platform: 'twitter'
+            platform: 'twitter',
+            selected: false
         },
         {
             profileName: 'ecnewmode',
             profileType: 'user',
-            platform: 'twitter'
+            platform: 'twitter',
+            selected: false
         },
         {
             profileName: 'eClincher',
             profileType: 'user',
-            platform: 'youtube'
+            platform: 'youtube',
+            selected: false
         },
         {
             profileName: 'TEST PAGE1',
             profileType: 'user',
-            platform: 'youtube'
+            platform: 'youtube',
+            selected: false
         },
         {
             profileName: 'QA-Test',
             profileType: 'page',
-            platform: 'google plus'
+            platform: 'google plus',
+            selected: false
         }
     ],
 

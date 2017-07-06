@@ -13,7 +13,7 @@ export default [
       senderType: 'DL',
       messageDate: new Date(1960, 12-1, 31),
       image: 'https://s1.favim.com/orig/21/boss-dumbledore-funny-harry-potter-like-a-boss-Favim.com-206937.jpg',
-      text: 'Surely you didn’t think I was going to keep my filthy Muggle father’s name? No. I fashioned myself a new name, a name I knew wizards everywhere would one day fear to speak, when I became the greatest sorcerer in the world!',
+      text: 'Surely you didn’t think I Twitter was going to keep my filthy Muggle father’s name? No. I fashioned myself a new name, a name I knew wizards everywhere would one day fear to speak, when I became the greatest sorcerer in the world!',
       color: '#cd486b',
       platform: 'instagram'
     },
