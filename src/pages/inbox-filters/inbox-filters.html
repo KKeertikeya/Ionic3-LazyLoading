@@ -8,7 +8,7 @@
 
 
 <ion-content no-padding>
-  
+
   <!-- ============== Profiles Toggle ============= -->
   <ion-item-divider color="light">
     <ion-toggle
@@ -26,7 +26,7 @@
     <ion-col *ngFor="let profiles of filterData.profiles; let i = index" col-6 no-padding no-margin>
       <ion-item no-padding no-margin *ngIf="i < 6">
         <ion-label color="dark">
-          {{ i + " - " + profiles.profileName }}
+          {{ profiles.profileName }}
         </ion-label>
         <!-- When clicked, all individual selected profiles will be unchecked -->
         <ion-toggle [(ngModel)]='profiles["selected"]' (click)="selectIndividualProfiles(i)"></ion-toggle>
@@ -47,19 +47,70 @@
 
   <!-- ============== Types Toggle ============= -->
   <ion-item-divider color="light">
-    <ion-toggle disabled checked="true" item-start [(ngModel)]="allAccountTypesToggle"></ion-toggle>
+    <ion-toggle
+      item-start
+      [(ngModel)]="allTypes"
+      (click)='selectAllTypes()'
+      [disabled]='allTypes'
+    >
+    </ion-toggle>
     <ion-label>All account types</ion-label>
   </ion-item-divider>
 
   <!-- Show all types -->
-  <ion-row *ngFor="let type of filterData.types | rowPipe:2 | slice:0:1" col-12 no-padding no-margin style="padding: 0px 8px" radio-group>
-    <ion-col *ngFor="let type of filterData.types; let i = index" col-6 no-padding no-margin >
+  <ion-row *ngFor="let types of filterData.types | rowPipe:2 | slice:0:1" col-12 no-padding no-margin style="padding: 0px 8px" radio-group>
+    <ion-col *ngFor="let types of filterData.types; let i = index" col-6 no-padding no-margin >
       <ion-item no-padding no-margin>
         <ion-label no-padding no-margin stacked>
-          <ion-icon [name]='type.icon' [color]='type.platform' item-left no-padding no-margin></ion-icon>
-          {{ type.type }}
+          <ion-icon
+            [name]='types.icon'
+            [color]='types.platform'
+            item-left
+            no-padding
+            no-margin
+          >
+          </ion-icon>
+          {{ types.type }}
         </ion-label>
-        <ion-radio enabled checked="false"></ion-radio>
+
+        <!-- When clicked, all individual selected profiles will be unchecked -->
+        <ion-toggle
+          [(ngModel)]='types["selected"]'
+          (click)="selectIndividualTypes(i)"
+        >
+        </ion-toggle>
+      </ion-item>
+    </ion-col>
+  </ion-row>
+
+
+
+
+  <!-- ============== Tags Toggle ============= -->
+  <ion-item-divider color="light">
+    <ion-toggle
+      item-start
+      [(ngModel)]="allTags"
+      (click)='selectAllTags()'
+      [disabled]='allTags'
+    >
+    </ion-toggle>
+    <ion-label>All tags</ion-label>
+  </ion-item-divider>
+
+  <!-- Show all tags -->
+  <ion-row *ngFor="let tags of filterData.tags | rowPipe:2 | slice:0:1" col-12 no-padding no-margin style="padding: 0px 8px" radio-group>
+    <ion-col *ngFor="let tags of filterData.tags; let i = index" col-6 no-padding no-margin >
+      <ion-item no-padding no-margin>
+        <ion-label  stacked>
+          {{ tags.name }}
+        </ion-label>
+        <!-- When clicked, all individual selected tags will be unchecked -->
+        <ion-toggle
+          [(ngModel)]='tags["selected"]'
+          (click)="selectIndividualTags(i)"
+        >
+        </ion-toggle>
       </ion-item>
     </ion-col>
   </ion-row>

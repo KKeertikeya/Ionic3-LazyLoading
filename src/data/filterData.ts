@@ -84,85 +84,118 @@ export default {
         {
             platform: 'facebook',
             type: 'comment',
-            icon: 'logo-facebook'
+            icon: 'logo-facebook',
+            selected: false
         },
         {
             platform: 'facebook',
             type: 'ad comment',
-            icon: 'logo-facebook'
+            icon: 'logo-facebook',
+            selected: false
         },
         {
             platform: 'facebook',
             type: 'likes',
-            icon: 'logo-facebook'
+            icon: 'logo-facebook',
+            selected: false
         },
         {
             platform: 'facebook',
             type: 'shares',
-            icon: 'logo-facebook'
+            icon: 'logo-facebook',
+            selected: false
         },
         {
             platform: 'facebook',
             type: 'others',
-            icon: 'logo-facebook'
+            icon: 'logo-facebook',
+            selected: false
         },
         {
             platform: 'facebook',
             type: 'write on wall',
-            icon: 'logo-facebook'
+            icon: 'logo-facebook',
+            selected: false
         },
         {
             platform: 'facebook',
             type: 'direct message',
-            icon: 'logo-facebook'
+            icon: 'logo-facebook',
+            selected: false
         },
         {
             platform: 'facebook',
             type: 'reviews',
-            icon: 'logo-facebook'
+            icon: 'logo-facebook',
+            selected: false
         },
         {
             platform: 'twitter',
             type: 'new followers',
-            icon: 'logo-twitter'
+            icon: 'logo-twitter',
+            selected: false
         },
         {
             platform: 'twitter',
             type: 'direct message',
-            icon: 'logo-twitter'
+            icon: 'logo-twitter',
+            selected: false
         },
         {
             platform: 'twitter',
             type: 'mentions',
-            icon: 'logo-twitter'
+            icon: 'logo-twitter',
+            selected: false
         },
         {
             platform: 'twitter',
             type: 'retweets',
-            icon: 'logo-twitter'
+            icon: 'logo-twitter',
+            selected: false
         },
         {
             platform: 'linkedin',
             type: 'company comment',
-            icon: 'logo-linkedin'
+            icon: 'logo-linkedin',
+            selected: false
         },
         {
             platform: 'googlePlus',
             type: 'page comment',
-            icon: 'logo-googleplus'
+            icon: 'logo-googleplus',
+            selected: false
         },
         {
             platform: 'instagram',
             type: 'comments',
-            icon: 'logo-instagram'
+            icon: 'logo-instagram',
+            selected: false
         }
     ],
     tags: [
-        'leads',
-        'influencers',
-        'followup',
-        'important',
-        'test',
-        'positive'
+        {
+            name: 'leads',
+            selected: false
+        },
+        {
+            name: 'influencers',
+            selected: false
+        },
+        {
+            name: 'followup',
+            selected: false
+        },
+        {
+            name: 'important',
+            selected: false
+        },
+        {
+            name: 'test',
+            selected: false
+        },
+        {
+            name: 'positive',
+            selected: false
+        }
     ]
 }
