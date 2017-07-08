@@ -75,7 +75,7 @@ export class InboxFiltersPage implements OnInit {
   */
   selectAllProfiles() {
     if (this.allProfiles) {
-      console.log("Inside selectAllProfiles()");
+      // console.log("Inside selectAllProfiles()");
 
       this.numberOfSelectedProfiles = 0;
 
@@ -128,13 +128,13 @@ export class InboxFiltersPage implements OnInit {
   */
   selectAllTypes() {
     if (this.allTypes) {
-      console.log("Inside selectAllTypes()");
+      // console.log("Inside selectAllTypes()");
 
       this.numberOfSelectedTypes = 0;
 
       var j: number = 0;
       for (j = 0; j < this.typesLength; j++) {
-        console.log(j);
+        // console.log(j);
         this.types[j].selected = false;
       }
     }
@@ -211,26 +211,8 @@ export class InboxFiltersPage implements OnInit {
       this.allTags = false;
     }
 
-    // If a tag is selected, increment numberOfSelectedTags
-    /* if (this.tags[i].selected) {
-      this.tags[i].selected = true;
-      this.numberOfSelectedTags++;
-      console.log(this.tags);
-    }
-    // If a tag is deselected, increment numberOfSelectedTags
-    else {
-      this.tags[i].selected = false;
-      this.numberOfSelectedTags--;
-      console.log(this.tags);
-
-      if (this.numberOfSelectedTags === 0) {
-        this.allTags = true;
-      }
-    } */
-
-
+    // If an individual tag is selected
     if (this.tags[i].selected) {
-
       this.numberOfSelectedTags++;
     }
     // If a type is deselected, increment numberOfSelectedTypes

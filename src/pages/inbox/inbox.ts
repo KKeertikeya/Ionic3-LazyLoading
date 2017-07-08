@@ -29,7 +29,11 @@ export class InboxPage implements OnInit {
     this.filters = appliedFilters;
   }
 
-  goToFilters() {
+  goToInboxSettings() {
+    this.navCtrl.push('InboxSettingsPage');
+  }
+
+  goToInboxFilters() {
     this.navCtrl.push('InboxFiltersPage');
   }
 }

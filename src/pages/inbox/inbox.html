@@ -3,20 +3,30 @@
     <button ion-button color="dark"  menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <button ion-button color="dark" small float-right icon-only clear (click)='goToFilters()'>
+
+    <!-- Icon buttons -->
+    <button ion-button color="dark" small float-right icon-only clear (click)='goToInboxSettings()'>
+      <ion-icon name="settings"></ion-icon>
+    </button>
+    <button ion-button color="dark" small float-right icon-only clear (click)='goToInboxFilters()'>
       <ion-icon name="funnel"></ion-icon>
     </button>
-    <ion-title>Inbox</ion-title>
+    <button ion-button color="dark" small float-right icon-only clear (click)='goToInboxSettings()'>
+      <ion-icon name="search"></ion-icon>
+    </button>
+    <ion-title >Inbox</ion-title>
   </ion-navbar>
 </ion-header>
 
+
+
 <ion-content class="pageBackground">
-  <ion-item>
-    <ion-input type="text" placeholder="Filter" [(ngModel)]='filteredPlatform'></ion-input>
+  <!-- Searchbar -->
+  <ion-item >
+    <ion-input type="text" placeholder="Search" [(ngModel)]='filteredPlatform'></ion-input>
   </ion-item>
 
-
-
+  <!-- Messages are shown here -->
   <ion-card *ngFor='let message of messages | search:filteredPlatform: "platform": "sender": "text"'>
     
     <ion-card-header style="padding: 0px 0px 0px 2px; color: aliceblue" [style.background]='message.color'>

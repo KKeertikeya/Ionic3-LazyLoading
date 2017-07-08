@@ -3,6 +3,7 @@ import { IonicPageModule } from 'ionic-angular';
 
 import { InboxPage } from './inbox';
 import { InboxFiltersPageModule } from '../inbox-filters/inbox-filters.module';
+import { InboxSettingsPageModule } from '../inbox-settings/inbox-settings.module';
 
 import { ComposerSummaryComponentModule } from '../../components/composer-summary/composer-summary.module';
 import { ComposerDetailComponentModule } from '../../components/composer-detail/composer-detail.module';
@@ -21,6 +22,7 @@ import { InboxSearchPipeModule } from '../../pipes/inboxSearchPipe.module';
   imports: [
     IonicPageModule.forChild(InboxPage),
     InboxFiltersPageModule,
+    InboxSettingsPageModule,
     ComposerSummaryComponentModule,
     InboxSearchPipeModule,
     // InboxSearch,

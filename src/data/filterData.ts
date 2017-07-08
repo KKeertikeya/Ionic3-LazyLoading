@@ -3,78 +3,91 @@ export default {
         {
             profileName: 'Kotomatrix',
             profileType: 'page',
+            owner: 'Ron Cedar',
             platform: 'facebook',
             selected: false
         },
         {
             profileName: 'LadyGaga',
             profileType: 'page',
+            owner: 'Ron Cedar',
             platform: 'facebook',
             selected: false
         },
         {
             profileName: 'Mytestpage',
             profileType: 'page',
+            owner: 'Ron Cedar',
             platform: 'facebook',
             selected: false
         },
         {
             profileName: 'Ron Cedar',
             profileType: 'page',
+            owner: 'Ron Cedar',
             platform: 'facebook',
             selected: false
         },
         {
             profileName: 'Ronit-test',
             profileType: 'page',
+            owner: 'Ron Cedar',
             platform: 'facebook',
             selected: false
         },
         {
             profileName: 'eclincher_social',
             profileType: 'page',
+            owner: 'Ron Cedar',
             platform: 'instagram',
             selected: false
         },
         {
             profileName: 'play1app',
             profileType: 'user',
+            owner: 'Power Of Test',
             platform: 'instagram',
             selected: false
         },
         {
             profileName: 'RonCedar',
             profileType: 'user',
+            owner: 'RonCedar',
             platform: 'twitter',
             selected: false
         },
         {
-            profileName: 'Ronitf',
+            profileName: 'ronitf',
             profileType: 'user',
+            owner: 'Ronitf',
             platform: 'twitter',
             selected: false
         },
         {
             profileName: 'ecnewmode',
             profileType: 'user',
+            owner: 'Ecnewmode',
             platform: 'twitter',
             selected: false
         },
         {
             profileName: 'eClincher',
             profileType: 'user',
+            owner: 'Ron Cedar',
             platform: 'youtube',
             selected: false
         },
         {
             profileName: 'TEST PAGE1',
             profileType: 'user',
+            owner: 'TEST PAGE1',
             platform: 'youtube',
             selected: false
         },
         {
             profileName: 'QA-Test',
             profileType: 'page',
+            owner: 'Google+',
             platform: 'google plus',
             selected: false
         }
