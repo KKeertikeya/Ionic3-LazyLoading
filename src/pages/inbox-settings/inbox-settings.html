@@ -16,6 +16,15 @@
 
     <ion-item-divider color="light">Select profiles to show in your Inbox</ion-item-divider>
 
-    <ion-list>
+
+    <!-- Profiles -->
+    <ion-list *ngFor="let owner of profileOwners; let i = index">
+      <ion-list-header no-margin [color]='owner.profiles[0].platform'>
+         <ion-icon [name]="logos[i]"></ion-icon> 
+        {{ owner.name }}
+      </ion-list-header>
+      <ion-item *ngFor="let profile of owner.profiles">
+        {{ profile.profileName }}
+      </ion-item>
     </ion-list>
 </ion-content>

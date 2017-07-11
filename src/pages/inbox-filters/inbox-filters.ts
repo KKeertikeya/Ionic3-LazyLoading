@@ -23,8 +23,6 @@ export class InboxFiltersPage implements OnInit {
   types: any[] = new Array(this.typesLength);             // This array keeps all the types data
   tagsLength: number;                                     // Used for array declaration in the next line
   tags: any[] = new Array(this.tagsLength);               // This array keeps all the tags data 
-
-  // tagsArray: boolean[] = new Array(this.tagsLength);
   
   allProfiles: boolean;                                     // Used for toggling All profiles
   allTypes: boolean;                                        // Used for toggling All types
@@ -59,11 +57,6 @@ export class InboxFiltersPage implements OnInit {
     this.profiles = filterData.profiles
     this.types = filterData.types;
     this.tags = filterData.tags;
-
-    /* var i: number = 0;
-    for (i; i < filterData.tags.length; i++) {
-      this.tagsArray[i] = false;
-    } */
   }
 
 
