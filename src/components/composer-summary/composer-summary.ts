@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 
-import { AlertController } from 'ionic-angular';
+import { AlertController, NavController } from 'ionic-angular';
 
 @Component({
   selector: 'composer-summary',
@@ -40,8 +40,12 @@ export class ComposerSummaryComponent {
     }
   ]
 
-  constructor(private alertCtrl: AlertController) {
+  constructor(private alertCtrl: AlertController, private navCtrl: NavController) {
     
+  }
+
+  goToTagsPage() {
+    this.navCtrl.push("InboxTagsPage");
   }
 
   showCheckbox() {

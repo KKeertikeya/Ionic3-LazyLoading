@@ -20,8 +20,14 @@
     <!-- Profiles -->
     <ion-list *ngFor="let owner of profileOwners; let i = index">
       <ion-list-header no-margin [color]='owner.profiles[0].platform'>
-         <ion-icon [name]="logos[i]"></ion-icon> 
-        {{ owner.name }}
+        <ion-avatar item-start no-margin>
+          <img src="http://simpleicon.com/wp-content/uploads/multy-user.png">
+        </ion-avatar>
+        <ion-label>
+          <ion-icon [name]="logos[i]"></ion-icon>
+          {{ owner.name }}
+        </ion-label>
+        <ion-toggle></ion-toggle>
       </ion-list-header>
       <ion-item *ngFor="let profile of owner.profiles">
         {{ profile.profileName }}

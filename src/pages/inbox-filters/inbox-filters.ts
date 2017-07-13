@@ -38,14 +38,7 @@ export class InboxFiltersPage implements OnInit {
     this.numberOfSelectedProfiles = 0;
     this.numberOfSelectedTypes = 0;
     this.numberOfSelectedTags = 0;
-  }
 
-
-
-  // OnInit
-   ngOnInit() {
-    
-    console.log("----------------OnInit-----------------");
     this.allProfiles = true;
     this.allTypes = true;
     this.allTags = true;
@@ -57,6 +50,15 @@ export class InboxFiltersPage implements OnInit {
     this.profiles = filterData.profiles
     this.types = filterData.types;
     this.tags = filterData.tags;
+  }
+
+
+
+  // OnInit
+   ngOnInit() {
+    
+    console.log("----------------OnInit-----------------");
+    
   }
 
 

@@ -7,7 +7,7 @@
 </ion-header>
 
 
-<ion-content no-padding>
+<ion-content no-padding style="width: 100%">
 
   <!-- ============== Profiles Toggle ============= -->
   <ion-item-divider color="light">
@@ -22,16 +22,17 @@
   </ion-item-divider>
 
   <!-- Display first 6 profiles -->
-  <ion-row *ngFor="let profiles of filterData.profiles | rowPipe:2 | slice:0:1" col-12 no-padding no-margin style="padding: 0px 8px">
-    <ion-col *ngFor="let profiles of filterData.profiles; let i = index" col-6 no-padding no-margin>
+  <ion-row *ngFor="let profiles of filterData.profiles | rowPipe:2 | slice:0:1" col-12 no-padding no-margin style="width:100%;">
+    <!-- <ion-col *ngFor="let profiles of filterData.profiles; let i = index" col-6 no-padding no-margin> -->
+    <ion-card *ngFor="let profiles of filterData.profiles; let i = index" no-margin no-padding style="margin-left: 8px; margin-top: 8px;padding-left: 8px; width: 47%">
       <ion-item no-padding no-margin *ngIf="i < 6">
-        <ion-label color="dark">
+        <ion-label color="dark" stacked>
           {{ profiles.profileName }}
         </ion-label>
         <!-- When clicked, all individual selected profiles will be unchecked -->
         <ion-toggle [(ngModel)]='profiles["selected"]' (click)="selectIndividualProfiles(i)"></ion-toggle>
       </ion-item>
-    </ion-col>
+    </ion-card>
   </ion-row>
 
   <!-- Show more profiles button -->
@@ -58,8 +59,9 @@
   </ion-item-divider>
 
   <!-- Show all types -->
-  <ion-row *ngFor="let types of filterData.types | rowPipe:2 | slice:0:1" col-12 no-padding no-margin style="padding: 0px 8px" radio-group>
-    <ion-col *ngFor="let types of filterData.types; let i = index" col-6 no-padding no-margin >
+  <ion-row *ngFor="let types of filterData.types | rowPipe:2 | slice:0:1" col-12 no-padding no-margin radio-group margin-bottom>
+    <!-- <ion-col *ngFor="let types of filterData.types; let i = index" col-6 no-padding no-margin style="border: 1px solid black"> -->
+    <ion-card *ngFor="let types of filterData.types; let i = index" no-margin no-padding style="margin-left: 8px; margin-top: 8px;padding-left: 8px; width: 47%">
       <ion-item no-padding no-margin>
         <ion-label no-padding no-margin stacked>
           <ion-icon
@@ -69,7 +71,7 @@
             no-padding
             no-margin
           >
-          </ion-icon>
+          </ion-icon> 
           {{ types.type }}
         </ion-label>
 
@@ -80,7 +82,8 @@
         >
         </ion-toggle>
       </ion-item>
-    </ion-col>
+    </ion-card>
+    <!-- </ion-col> -->
   </ion-row>
 
 
@@ -99,8 +102,9 @@
   </ion-item-divider>
 
   <!-- Show all tags -->
-  <ion-row *ngFor="let tags of filterData.tags | rowPipe:2 | slice:0:1" col-12 no-padding no-margin style="padding: 0px 8px" radio-group>
-    <ion-col *ngFor="let tags of filterData.tags; let i = index" col-6 no-padding no-margin >
+  <ion-row *ngFor="let tags of filterData.tags | rowPipe:2 | slice:0:1" col-12 no-padding no-margin radio-group margin-bottom>
+    <!-- <ion-col *ngFor="let tags of filterData.tags; let i = index" col-6 no-padding no-margin > -->
+    <ion-card *ngFor="let tags of filterData.tags; let i = index" no-margin no-padding style="margin-left: 8px; margin-top: 8px;padding-left: 8px; width: 47%">
       <ion-item no-padding no-margin>
         <ion-label  stacked>
           {{ tags.name }}
@@ -112,7 +116,8 @@
         >
         </ion-toggle>
       </ion-item>
-    </ion-col>
+    </ion-card>
+    <!-- </ion-col> -->
   </ion-row>
 
 </ion-content>

@@ -27,7 +27,7 @@
   </ion-item>
 
   <!-- Messages are shown here -->
-  <ion-card *ngFor='let message of messages | search:filteredPlatform: "platform": "sender": "text"'>
+  <ion-card *ngFor='let message of messages | search:filteredPlatform: "platform": "sender": "text"' no-margin style="width: 100%; margin-top: 8px">
     
     <ion-card-header style="padding: 0px 0px 0px 2px; color: aliceblue" [style.background]='message.color'>
       <composer-summary 

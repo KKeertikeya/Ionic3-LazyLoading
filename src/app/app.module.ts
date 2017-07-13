@@ -6,12 +6,10 @@ import { MyApp } from './app.component';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-// import { InboxSearch } from './inboxSearch.pipe';
 
 @NgModule({
   declarations: [
-    MyApp,
-    // InboxSearch,
+    MyApp
   ],
   imports: [
     BrowserModule,

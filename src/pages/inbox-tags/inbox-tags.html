@@ -1,0 +1,30 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Tags</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content no-padding style="width:100%; padding-left: 8px">
+  <ion-row *ngFor="let tag of tagData | rowPipe:2 | slice:0:1" no-padding no-margin style="width:100%">
+    <ion-card *ngFor="let tag of tagData" no-margin no-padding padding-left style="margin-left: 8px; margin-top: 8px; width: 47%">
+      <ion-item no-padding no-margin>
+        <ion-label color="dark" stacked>
+          {{ tag.name | titlecase}}
+        </ion-label>
+        <ion-toggle checked="false"></ion-toggle>
+      </ion-item>
+    </ion-card>
+  </ion-row>
+
+  <ion-fab bottom right>
+    <button ion-fab color="primary"><ion-icon name="add"></ion-icon></button>
+  </ion-fab>
+</ion-content>
+
+<ion-footer>
+    <button ion-button clear no-margin style="width:49%">Save</button>
+    <button ion-button clear no-margin style="width:49%">Cancel</button>
+</ion-footer>
