@@ -54,6 +54,6 @@
       </post-content>
       
     </ion-card-content>
-    <facebook-message-action-buttons></facebook-message-action-buttons>
+    <facebook-message-action-buttons *ngIf='message.messageType === "direct message" && message.platform === "facebook" '></facebook-message-action-buttons>
   </ion-card>
 </ion-content>
