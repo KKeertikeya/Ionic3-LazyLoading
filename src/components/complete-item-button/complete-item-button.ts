@@ -15,23 +15,30 @@ export class CompleteItemButtonComponent {
   showCompleteConfirmationAlert() {
 
     console.log("button clicked");
-    
+
     let alert = this.alertController.create({
-      title: 'Complete',
-      subTitle: '10% of battery remaining',
+      title: 'Mark as complete?',
+      subTitle: 'This item won\'t show in your inbox once marked as complete.' ,
       buttons: [
         {
           text: 'Cancel',
           role: 'cancel',
           handler: () => {
-            console.log('Cancel clicked');
+            // console.log('Cancel clicked');
           }
         },
         {
-          text: 'Buy',
+          text: 'OK',
           handler: () => {
-            console.log('Buy clicked');
+            // console.log('Buy clicked');
           }
+        }
+      ],
+      inputs: [
+        {
+          type: 'checkbox',
+          label: 'Don\'t show this message again',
+          value: 'dontShowCompleteInboxItemAlert'
         }
       ]
     });

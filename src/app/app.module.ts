@@ -8,7 +8,6 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 
-import { SendLikeButtonComponentModule } from '../components/send-like-button/send-like-button.module';
 import { RetweetButtonComponentModule } from '../components/retweet-button/retweet-button.module';
 import { ViewPostAndCommentsComponentModule } from '../components/view-post-and-comments/view-post-and-comments.module';
 import { ShowInFacebookComponentModule } from '../components/show-in-facebook/show-in-facebook.module';
