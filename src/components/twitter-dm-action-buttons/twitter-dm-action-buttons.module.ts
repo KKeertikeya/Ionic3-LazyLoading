@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { IonicPageModule } from 'ionic-angular';
-import { FacebookCommentActionButtonsComponent } from './facebook-comment-action-buttons';
+import { TwitterDmActionButtonsComponent } from './twitter-dm-action-buttons';
 
 import { ReplyButtonComponentModule } from '../reply-button/reply-button.module';
 import { ViewConversationButtonComponentModule } from '../view-conversation-button/view-conversation-button.module';
@@ -9,17 +9,17 @@ import { SendLikeButtonComponentModule } from '../send-like-button/send-like-but
 
 @NgModule({
   declarations: [
-    FacebookCommentActionButtonsComponent,
+    TwitterDmActionButtonsComponent,
   ],
   imports: [
-    IonicPageModule.forChild(FacebookCommentActionButtonsComponent),
+    IonicPageModule.forChild(TwitterDmActionButtonsComponent),
     ReplyButtonComponentModule,
     ViewConversationButtonComponentModule,
     CompleteItemButtonComponentModule,
     SendLikeButtonComponentModule,
   ],
   exports: [
-    FacebookCommentActionButtonsComponent
+    TwitterDmActionButtonsComponent
   ]
 })
-export class FacebookCommentActionButtonsComponentModule {}
+export class TwitterDmActionButtonsComponentModule {}

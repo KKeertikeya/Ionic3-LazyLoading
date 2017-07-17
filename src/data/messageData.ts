@@ -17,7 +17,7 @@ export default [
       text: 'Surely you didn’t think I Twitter was going to keep my filthy Muggle father’s name? No. I fashioned myself a new name, a name I knew wizards everywhere would one day fear to speak, when I became the greatest sorcerer in the world!',
       color: '#cd486b',
       platform: 'instagram',
-      messageType: 'direct message'
+      messageType: 'comment'
     },
     {
       sender: 'Snape',
@@ -44,9 +44,9 @@ export default [
       senderType: 'Friend',
       messageDate: new Date(),
       image: 'https://pbs.twimg.com/profile_images/2553924396/image.jpg',
-      text: 'I knew Ginny was lying about that tattoo.',
+      text: '@HarryPotter There\'s no need to call me sir, Professor! Ahahahaha',
       color: '#1dcaff',
       platform: 'twitter',
-      messageType: 'direct message'
+      messageType: 'retweet'
     }
   ];
