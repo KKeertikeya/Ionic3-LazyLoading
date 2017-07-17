@@ -1,0 +1,6 @@
+This folder contains all the major components that will show in the Pages of the project.
+    e.g.
+    facebook-message-action-button
+    twitter-new-follower-action-buttons
+    google-plus-page-comment-action-buttons
+    etc.

@@ -1,0 +1,8 @@
+This folder contains all the generic components that are used by the major components.
+e.g.
+The major component facebook-message-action-buttons
+contains the following generic components
+    1. complete-item-button
+    2. view-conversation-button
+    3. reply-button
+    3. send-like-button

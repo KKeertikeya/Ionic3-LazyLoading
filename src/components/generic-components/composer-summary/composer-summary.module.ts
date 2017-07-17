@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { IonicPageModule } from 'ionic-angular';
 import { ComposerSummaryComponent } from './composer-summary';
 
-import { InboxTagsPageModule } from '../../pages/inbox-tags/inbox-tags.module';
+import { InboxTagsPageModule } from '../../../pages/inbox-tags/inbox-tags.module';
 
 @NgModule({
   declarations: [
