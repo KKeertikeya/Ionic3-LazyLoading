@@ -14,7 +14,7 @@ export class CompleteItemButtonComponent {
 
   showCompleteConfirmationAlert() {
 
-    console.log("button clicked");
+    // console.log("button clicked");
 
     let alert = this.alertController.create({
       title: 'Mark as complete?',

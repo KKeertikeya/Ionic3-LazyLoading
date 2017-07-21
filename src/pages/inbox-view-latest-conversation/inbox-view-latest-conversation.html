@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Conversation</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content no-padding no-margin>
+  <ion-card *ngFor='let message of messages' no-margin style="width: 100%">
+    
+    <ion-card-header no-margin no-padding >
+      
+      <ion-item no-margin [style.background]="message.me ? 'none' : 'lightgray'">
+        <ion-avatar item-start>
+          <img src= '{{ message.senderImage }}'>
+        </ion-avatar>
+        <h2>{{ message.sender }}</h2>
+        <p>{{ message.date }}</p>
+      </ion-item>
+    </ion-card-header>
+
+
+    <ion-card-content no-margin padding-left padding-right [style.background]="message.me ? '#fff' : 'lightgray'">
+        {{ message.content }}
+    </ion-card-content>
+  
+    <ion-segment *ngIf='!message.me' >
+      <ion-segment-button [ngStyle]="{'background-color':'lightgray', 'color':'gray'}">1</ion-segment-button>
+      <ion-segment-button [ngStyle]="{'background-color':'lightgray', 'color':'gray'}">2</ion-segment-button>
+      <ion-segment-button [ngStyle]="{'background-color':'lightgray', 'color':'gray'}">3</ion-segment-button>
+    </ion-segment>
+
+  </ion-card>
+</ion-content>

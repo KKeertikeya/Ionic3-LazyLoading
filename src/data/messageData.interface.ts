@@ -6,5 +6,6 @@ export interface MessageDataInterface {
     text: string,
     color: string,
     platform: string,
-    messageType: string
+    messageType: string,
+    conversationID: string
 }
