@@ -10,11 +10,11 @@
 <ion-content>
 
     <ion-item no-margin>
-      <ion-label>Complete all items</ion-label>
+      <ion-label style="font-size: 0.9em">Complete all items</ion-label>
       <ion-toggle></ion-toggle>
     </ion-item>
 
-    <ion-item-divider color="light">Select profiles to show in your Inbox</ion-item-divider>
+    <ion-item-divider color="light" >Select profiles to show in your Inbox</ion-item-divider>
 
 
     <!-- Profiles -->
@@ -30,7 +30,7 @@
         <ion-toggle></ion-toggle>
       </ion-list-header>
       <ion-item *ngFor="let profile of owner.profiles">
-        {{ profile.profileName }}
+        <span style="font-size: 0.9em">{{ profile.profileName }}</span>
       </ion-item>
     </ion-list>
 </ion-content>

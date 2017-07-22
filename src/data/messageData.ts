@@ -19,7 +19,7 @@ export default [
       senderType: 'HM',
       messageDate: new Date(1880, 1-1, 1),
       image: 'https://i.ytimg.com/vi/R6LkIcMB3oY/maxresdefault.jpg',
-      text: 'Of course it is happening inside your head, Harry, but why on earth should that mean that it is not real?',
+      text: 'Of course it is happening inside your head, Harry, but why on earth should that mean that it is not real? <a [href]="angularDocsUrl">Angular Docs</a>',
       color: '#3b5998',
       platform: 'facebook',
       messageType: 'direct message',

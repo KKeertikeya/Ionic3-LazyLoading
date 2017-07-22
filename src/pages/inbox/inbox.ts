@@ -35,4 +35,19 @@ export class InboxPage {
     
     this.navCtrl.push('InboxFiltersPage');
   }
+ 
+  filterItems(ev: any) {
+    // this.setItems();
+    let val = ev.value;
+    /* alert(val);
+    if (val && val.trim() !== '') {
+      this.messages = this.messages.filter(
+        function(item) {
+          return this.messages.toLowerCase().includes(val.toLowerCase());
+        }
+      );
+    } */
+  } 
+
+
 }

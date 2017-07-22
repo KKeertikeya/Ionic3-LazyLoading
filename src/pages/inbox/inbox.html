@@ -22,9 +22,16 @@
 
 <ion-content class="pageBackground">
   <!-- Searchbar -->
-  <ion-item >
+  <ion-searchbar no-padding no-margin
+    placeholder="Filter Items with Cancel"
+    showCancelButton color="danger"
+    (ionInput)="filterItems($event)">
+  </ion-searchbar>
+
+  <!-- <ion-item no-padding no-margin class='short'>
+    <ion-icon name="search"></ion-icon>
     <ion-input type="text" placeholder="Search" [(ngModel)]='filteredPlatform'></ion-input>
-  </ion-item>
+  </ion-item> -->
 
   <!-- Messages are shown here -->
   <ion-card *ngFor='let message of messages | search:filteredPlatform: "platform": "sender": "text"' no-margin style="width: 100%; margin-top: 8px">

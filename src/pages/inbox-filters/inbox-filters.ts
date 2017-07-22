@@ -7,6 +7,9 @@ import filterData from '../../data/filterData';
 @Component({
   selector: 'page-inbox-filters',
   templateUrl: 'inbox-filters.html',
+  styles: [`
+    .profile-show {display: none}
+  `],
 })
 export class InboxFiltersPage implements OnInit {
 
