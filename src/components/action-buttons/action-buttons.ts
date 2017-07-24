@@ -1,7 +1,6 @@
 import { Component, Input } from '@angular/core';
 
 import { MessageDataInterface } from '../../data/messageData.interface';
-// import allMessages from '../../data/messageData';
 
 @Component({
   selector: 'action-buttons',
@@ -11,10 +10,7 @@ export class ActionButtonsComponent {
 
   @Input() message: MessageDataInterface;
 
-  // messages: MessageDataInterface[];
-
   constructor() {
-    // this.messages = allMessages;
     
   }
 

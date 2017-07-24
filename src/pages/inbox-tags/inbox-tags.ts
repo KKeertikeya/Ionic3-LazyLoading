@@ -47,7 +47,7 @@ export class InboxTagsPage {
         }
       ]
     });
-    alert.present(); 
+    alert.present();
   }
 
 }

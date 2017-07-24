@@ -28,10 +28,12 @@
     (ionInput)="filterItems($event)">
   </ion-searchbar>
 
-  <!-- <ion-item no-padding no-margin class='short'>
+  <!--
+  <ion-item no-padding no-margin class='short'>
     <ion-icon name="search"></ion-icon>
     <ion-input type="text" placeholder="Search" [(ngModel)]='filteredPlatform'></ion-input>
-  </ion-item> -->
+  </ion-item>
+  -->
 
   <!-- Messages are shown here -->
   <ion-card *ngFor='let message of messages | search:filteredPlatform: "platform": "sender": "text"' no-margin style="width: 100%; margin-top: 8px">
@@ -66,16 +68,7 @@
       [message]="message"
       >
     </action-buttons>
-
-    <!-- All action buttons are here. -->
-    <!-- For Facebook -->
-    <facebook-message-action-buttons *ngIf='message.messageType === "direct message" && message.platform === "facebook" '></facebook-message-action-buttons>
-    <facebook-comment-action-buttons *ngIf='message.messageType === "comment" && message.platform === "facebook" '></facebook-comment-action-buttons>
-
-    <!-- For Twitter -->
-    <twitter-dm-action-buttons *ngIf='message.messageType === "direct message" && message.platform === "twitter" '></twitter-dm-action-buttons>
-    <twitter-retweet-action-buttons *ngIf='message.messageType === "retweet" && message.platform === "twitter" '></twitter-retweet-action-buttons>
-    <twitter-new-follower-action-buttons *ngIf='message.messageType === "new follower" && message.platform === "twitter" '></twitter-new-follower-action-buttons>
+    
   </ion-card>
 
 </ion-content>
