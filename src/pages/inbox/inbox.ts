@@ -38,7 +38,7 @@ export class InboxPage {
  
   filterItems(ev: any) {
     // this.setItems();
-    let val = ev.value;
+    // let val = ev.value;
     /* alert(val);
     if (val && val.trim() !== '') {
       this.messages = this.messages.filter(

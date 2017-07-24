@@ -62,6 +62,11 @@
       
     </ion-card-content>
 
+    <action-buttons
+      [message]="message"
+      >
+    </action-buttons>
+
     <!-- All action buttons are here. -->
     <!-- For Facebook -->
     <facebook-message-action-buttons *ngIf='message.messageType === "direct message" && message.platform === "facebook" '></facebook-message-action-buttons>
@@ -72,4 +77,5 @@
     <twitter-retweet-action-buttons *ngIf='message.messageType === "retweet" && message.platform === "twitter" '></twitter-retweet-action-buttons>
     <twitter-new-follower-action-buttons *ngIf='message.messageType === "new follower" && message.platform === "twitter" '></twitter-new-follower-action-buttons>
   </ion-card>
+
 </ion-content>

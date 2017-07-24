@@ -8,10 +8,8 @@
     6. color: the background color of the platform on which the activity took place                                       -------------- probably not required
     7. messageType: the type of message, can be 'direct message', 'like', 'comment', 'mention', etc.
     8. conversationID: this ID will be used to reference particular conversations for 'view latest conversation' feature
-    9. 
+    9. actionButtons: contains the boolean values for which action buttons to show based on profile and ebent types
 */
-
-
 
 export default [
     {
@@ -24,6 +22,26 @@ export default [
       platform: 'facebook',
       messageType: 'direct message',
       conversationID: 'ad001',
+      actionButtons: {
+        completeItem: true,
+        TWSendDirectMessage: false,
+        FBSendDirectMessage: false,
+        TWReply: false,
+        FBReply: true,
+        YTReply: false,
+        INReply: false,
+        TWFollowBack: false,
+        viewLatestConversation: true,
+        INViewPostsAnfComments: false,
+        FBViewPostsAnfComments: false,
+        retweet: false,
+        TWLike: false,
+        FBLike: true,
+        showInFacebook: false,
+        FBShowMore: false,
+        FBViewComments: false,
+        YTViewComments: false,
+      }
     },
     {
       sender: 'Voldy',
@@ -35,6 +53,26 @@ export default [
       platform: 'instagram',
       messageType: 'comment',
       conversationID: 'tmr008',
+      actionButtons: {
+        completeItem: true,
+        TWSendDirectMessage: false,
+        FBSendDirectMessage: false,
+        TWReply: false,
+        FBReply: false,
+        YTReply: false,
+        INReply: false,
+        TWFollowBack: false,
+        viewLatestConversation: false,
+        INViewPostsAnfComments: false,
+        FBViewPostsAnfComments: false,
+        retweet: false,
+        TWLike: false,
+        FBLike: false,
+        showInFacebook: false,
+        FBShowMore: false,
+        FBViewComments: false,
+        YTViewComments: false,
+      }
     },
     {
       sender: 'Snape',
@@ -46,6 +84,26 @@ export default [
       platform: 'googleplus',
       messageType: 'page comment',
       conversationID: 'ss007',
+      actionButtons: {
+        completeItem: true,
+        TWSendDirectMessage: false,
+        FBSendDirectMessage: false,
+        TWReply: false,
+        FBReply: false,
+        YTReply: false,
+        INReply: false,
+        TWFollowBack: false,
+        viewLatestConversation: false,
+        INViewPostsAnfComments: false,
+        FBViewPostsAnfComments: false,
+        retweet: false,
+        TWLike: false,
+        FBLike: false,
+        showInFacebook: false,
+        FBShowMore: false,
+        FBViewComments: false,
+        YTViewComments: false,
+      }
     },
     {
       sender: 'Hermione Granger',
@@ -57,6 +115,26 @@ export default [
       platform: 'twitter',
       messageType: 'direct message',
       conversationID: 'hg002',
+      actionButtons: {
+        completeItem: true,
+        TWSendDirectMessage: false,
+        FBSendDirectMessage: false,
+        TWReply: false,
+        FBReply: false,
+        YTReply: false,
+        INReply: false,
+        TWFollowBack: false,
+        viewLatestConversation: false,
+        INViewPostsAnfComments: false,
+        FBViewPostsAnfComments: false,
+        retweet: false,
+        TWLike: false,
+        FBLike: false,
+        showInFacebook: false,
+        FBShowMore: false,
+        FBViewComments: false,
+        YTViewComments: false,
+      }
     },
     {
       sender: 'Ron Weasley',
@@ -68,5 +146,25 @@ export default [
       platform: 'twitter',
       messageType: 'retweet',
       conversationID: 'rw001',
+      actionButtons: {
+        completeItem: true,
+        TWSendDirectMessage: false,
+        FBSendDirectMessage: false,
+        TWReply: false,
+        FBReply: false,
+        YTReply: false,
+        INReply: false,
+        TWFollowBack: false,
+        viewLatestConversation: false,
+        INViewPostsAnfComments: false,
+        FBViewPostsAnfComments: false,
+        retweet: true,
+        TWLike: false,
+        FBLike: false,
+        showInFacebook: false,
+        FBShowMore: false,
+        FBViewComments: false,
+        YTViewComments: false,
+      }
     }
   ];

@@ -15,7 +15,6 @@ import { PostContentComponentModule } from '../../components/generic-components/
 //actions buttons
 import { ActionButtonsComponentModule } from '../../components/action-buttons/action-buttons.module';
 
-
 // Major components
 import { FacebookCommentActionButtonsComponentModule } from '../../components/action-buttons-components/facebook-comment-action-buttons/facebook-comment-action-buttons.module';
 import { FacebookMessageActionButtonsComponentModule } from '../../components/action-buttons-components/facebook-message-action-buttons/facebook-message-action-buttons.module';
@@ -44,8 +43,10 @@ import { InboxSearchPipeModule } from '../../pipes/inboxSearchPipe.module';
     ComposerSummaryComponentModule,
     InboxSearchPipeModule,
     ComposerDetailComponentModule,
+
     //Action Buttons
     ActionButtonsComponentModule,
+    
     // Action buttons modules
     FacebookCommentActionButtonsComponentModule,
     FacebookMessageActionButtonsComponentModule,

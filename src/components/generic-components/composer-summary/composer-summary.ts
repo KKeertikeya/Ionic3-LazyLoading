@@ -17,7 +17,7 @@ export class ComposerSummaryComponent {
   newLabel: string = '';
   newValue: string = '';
 
-  tags = [
+  /* tags = [
     {
       lable: 'Important',
       value: 'important'
@@ -38,7 +38,7 @@ export class ComposerSummaryComponent {
       lable: 'Positive',
       value: 'positive'
     }
-  ]
+  ] */
 
   constructor(private alertCtrl: AlertController, private navCtrl: NavController) {
     
@@ -48,7 +48,7 @@ export class ComposerSummaryComponent {
     this.navCtrl.push("InboxTagsPage");
   }
 
-  showCheckbox() {
+  /* showCheckbox() {
     let alert = this.alertCtrl.create();
     alert.setTitle('Select tags');
 
@@ -112,5 +112,5 @@ export class ComposerSummaryComponent {
     alert.addButton('Cancel');
     
     alert.present();
-  }
+  } */
 }

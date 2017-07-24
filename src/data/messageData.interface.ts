@@ -7,5 +7,6 @@ export interface MessageDataInterface {
     color: string,
     platform: string,
     messageType: string,
-    conversationID: string
+    conversationID: string,
+    actionButtons: any,
 }

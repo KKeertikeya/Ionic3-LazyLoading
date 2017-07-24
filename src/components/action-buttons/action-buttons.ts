@@ -1,22 +1,21 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
-/**
- * Generated class for the ActionButtonsComponent component.
- *
- * See https://angular.io/docs/ts/latest/api/core/index/ComponentMetadata-class.html
- * for more info on Angular Components.
- */
+import { MessageDataInterface } from '../../data/messageData.interface';
+// import allMessages from '../../data/messageData';
+
 @Component({
   selector: 'action-buttons',
   templateUrl: 'action-buttons.html'
 })
 export class ActionButtonsComponent {
 
-  text: string;
+  @Input() message: MessageDataInterface;
+
+  // messages: MessageDataInterface[];
 
   constructor() {
-    console.log('Hello ActionButtonsComponent Component');
-    this.text = 'Hello World';
+    // this.messages = allMessages;
+    
   }
 
 }
