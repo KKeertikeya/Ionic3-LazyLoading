@@ -5,10 +5,11 @@
     3. messageDate: date on which the message (or activity) took place
     4. image: the profile picture of the sender
     5. text: the text content of the message (or activity)
-    6. color: the background color of the platform on which the activity took place                                       -------------- probably not required
-    7. messageType: the type of message, can be 'direct message', 'like', 'comment', 'mention', etc.
-    8. conversationID: this ID will be used to reference particular conversations for 'view latest conversation' feature
-    9. actionButtons: contains the boolean values for which action buttons to show based on profile and ebent types
+    6. attachment: image/video attached in the post's content                                                             -------------- to be implemented
+    7. color: the background color of the platform on which the activity took place                                       -------------- probably not required
+    8. messageType: the type of message, can be 'direct message', 'like', 'comment', 'mention', etc.
+    9. conversationID: this ID will be used to reference particular conversations for 'view latest conversation' feature
+    10. actionButtons: contains the boolean values for which action buttons to show based on profile and ebent types
 */
 
 export default [
@@ -17,7 +18,7 @@ export default [
       senderType: 'HM',
       messageDate: new Date(1880, 1-1, 1),
       image: 'https://i.ytimg.com/vi/R6LkIcMB3oY/maxresdefault.jpg',
-      text: 'Of course it is happening inside your head, Harry, but why on earth should that mean that it is not real? <a [href]="angularDocsUrl">Angular Docs</a>',
+      text: 'Of course it is happening inside your head, Harry, but why on earth should that mean that it is not real? <a href="http://ionicframework.com/docs/v2">docs</a>',
       color: '#3b5998',
       platform: 'facebook',
       messageType: 'direct message',
