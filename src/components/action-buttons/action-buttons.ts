@@ -1,7 +1,8 @@
 import { Component, Input } from '@angular/core';
-import { AlertController } from 'ionic-angular';
+import { AlertController, ToastController, ModalController, PopoverController } from 'ionic-angular';
 
 import { MessageDataInterface } from '../../data/messageData.interface';
+import { PopoverPage } from '../../pages/popover/popover';
 
 @Component({
   selector: 'action-buttons',
@@ -11,10 +12,38 @@ export class ActionButtonsComponent {
 
   @Input() message: MessageDataInterface;
 
-  constructor(public alertCtrl: AlertController) {
-    
+  constructor (public alertCtrl: AlertController,
+    private toastCtrl: ToastController,
+    public modalCtrl: ModalController,
+    public popoverCtrl: PopoverController) {
   }
 
+
+
+
+  /* 
+    Present toast
+  */
+  presentToast(msg: string) {
+    let toast = this.toastCtrl.create({
+      message: msg,
+      duration: 3000,
+      // position: 'top'
+    });
+
+    toast.onDidDismiss(() => {
+      console.log('Dismissed toast');
+    });
+
+    toast.present();
+  }
+
+
+
+ 
+  /*
+    Complete Item clicked
+  */
   showCompleteItemAlert () {
     let alert = this.alertCtrl.create({
       title: 'Mark as complete?',
@@ -34,6 +63,8 @@ export class ActionButtonsComponent {
       text: 'Ok',
       handler: (data: string) => {
         console.log('Checkbox data:', data);
+        this.presentToast('Item has been marked as complete.');
+        this.message.completed = true;
       }
     });
 
@@ -41,4 +72,83 @@ export class ActionButtonsComponent {
 
   }
 
+
+
+  /*
+    Send direct message
+  */
+  sendDirectMessage(platform: string) {}
+
+
+
+
+  /*  */
+  sendReply(platform: string, myEvent) {
+    // let profileModal = this.modalCtrl.create({ userId: 8675309 });
+    // profileModal.present();
+
+    const popover = this.popoverCtrl.create(PopoverPage);
+    popover.present({
+      ev: myEvent
+    });
+  }
+
+
+
+  /*  */
+  followBack() {}
+
+
+
+  /*  */
+  viewLatestConversation(conversationID: string) {}
+
+
+
+  /*  */
+  instagramViewPostAndComments(conversationID: string) {}
+
+
+
+  /*  */
+  facebookViewPostAndComments(conversationID: string) {}
+
+
+
+  /*  */
+  retweet() {}
+
+
+
+  /*  */
+  sendLike(platform: string) {}
+
+
+
+  /*  */
+  showInFacebook() {}
+
+
+
+  /*  */
+  facebookShowMore() {}
+
+
+
+  /*  */
+  facebookViewComments() {}
+
+
+
+  /*  */
+  youtubeViewComments() {}
+
 }
+
+
+// @Component({})
+// export class Profile {
+//   constructor(params: NavParams) {
+//     console.log('UserId', params.get('userId'));
+//   }
+// }

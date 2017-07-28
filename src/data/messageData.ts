@@ -23,6 +23,7 @@ export default [
       platform: 'facebook',
       messageType: 'direct message',
       conversationID: 'ad001',
+      completed: false,
       actionButtons: {
         completeItem: true,
         TWSendDirectMessage: false,
@@ -54,6 +55,7 @@ export default [
       platform: 'instagram',
       messageType: 'comment',
       conversationID: 'tmr008',
+      completed: false,
       actionButtons: {
         completeItem: true,
         TWSendDirectMessage: false,
@@ -85,6 +87,7 @@ export default [
       platform: 'googleplus',
       messageType: 'page comment',
       conversationID: 'ss007',
+      completed: false,
       actionButtons: {
         completeItem: true,
         TWSendDirectMessage: false,
@@ -116,6 +119,7 @@ export default [
       platform: 'twitter',
       messageType: 'direct message',
       conversationID: 'hg002',
+      completed: false,
       actionButtons: {
         completeItem: true,
         TWSendDirectMessage: false,
@@ -147,6 +151,7 @@ export default [
       platform: 'twitter',
       messageType: 'retweet',
       conversationID: 'rw001',
+      completed: false,
       actionButtons: {
         completeItem: true,
         TWSendDirectMessage: false,

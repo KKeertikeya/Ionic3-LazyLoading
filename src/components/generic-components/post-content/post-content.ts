@@ -7,7 +7,6 @@ import { Component, Input } from '@angular/core';
 export class PostContentComponent {
 
   @Input() text: string;
-  link: string = "http://ionicframework.com/docs/v2";
 
   constructor() {
     

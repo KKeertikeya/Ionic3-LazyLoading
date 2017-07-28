@@ -8,5 +8,6 @@ export interface MessageDataInterface {
     platform: string,
     messageType: string,
     conversationID: string,
+    completed: boolean,
     actionButtons: any,
 }

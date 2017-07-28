@@ -8,87 +8,87 @@
   </ion-segment-button>
     
   <!-- TWSendDirectMessage -->
-  <ion-segment-button icon-only *ngIf='message.actionButtons.TWSendDirectMessage'>
+  <ion-segment-button icon-only *ngIf='message.actionButtons.TWSendDirectMessage' (click)="sendDirectMessage('twitter')">
     <ion-icon name="mail" color='icons'></ion-icon>
   </ion-segment-button>
   
   <!-- FBSendDirectMessage -->
-  <ion-segment-button icon-only *ngIf='message.actionButtons.FBSendDirectMessage'>
+  <ion-segment-button icon-only *ngIf='message.actionButtons.FBSendDirectMessage' (click)="sendDirectMessage('facebook')">
     <ion-icon name="mail" color='icons'></ion-icon>
   </ion-segment-button>
   
   <!-- TWReply -->
-  <ion-segment-button icon-only *ngIf='message.actionButtons.TWReply'>
+  <ion-segment-button icon-only *ngIf='message.actionButtons.TWReply' (click)="sendReply('twitter', $event)">
     <ion-icon name="ios-undo" color='icons'></ion-icon>
   </ion-segment-button>
   
   <!-- FBReply -->
-  <ion-segment-button icon-only *ngIf='message.actionButtons.FBReply'>
+  <ion-segment-button icon-only *ngIf='message.actionButtons.FBReply' (click)="sendReply('facebook', $event)">
     <ion-icon name="ios-undo" color='icons'></ion-icon>
   </ion-segment-button>
   
   <!-- YTReply -->
-  <ion-segment-button icon-only *ngIf='message.actionButtons.YTReply'>
+  <ion-segment-button icon-only *ngIf='message.actionButtons.YTReply' (click)="sendReply('youtube', $event)">
     <ion-icon name="ios-undo" color='icons'></ion-icon>
   </ion-segment-button>
 
   <!-- INReply -->
-  <ion-segment-button icon-only *ngIf='message.actionButtons.INReply'>
+  <ion-segment-button icon-only *ngIf='message.actionButtons.INReply' (click)="sendReply('instagram', $event)">
     <ion-icon name="ios-undo" color='icons'></ion-icon>
   </ion-segment-button>
 
   <!-- TWFollowBack -->
-  <ion-segment-button icon-only *ngIf='message.actionButtons.TWFollowBack'>
+  <ion-segment-button icon-only *ngIf='message.actionButtons.TWFollowBack' (click)="followBack()">
     <ion-icon name="person-add" color='icons'></ion-icon>
   </ion-segment-button>
 
   <!-- viewLatestConversation -->
-  <ion-segment-button icon-only *ngIf='message.actionButtons.viewLatestConversation'>
+  <ion-segment-button icon-only *ngIf='message.actionButtons.viewLatestConversation' (click)="viewLatestConversation('convo001')">
     <ion-icon name="eye" color='icons'></ion-icon>
   </ion-segment-button>
 
   <!-- INViewPostsAnfComments -->
-  <ion-segment-button icon-only *ngIf='message.actionButtons.INViewPostsAnfComments'>
+  <ion-segment-button icon-only *ngIf='message.actionButtons.INViewPostsAndComments' (click)="instagramViewPostAndComments('convoIN001')">
     <ion-icon name="eye" color='icons'></ion-icon>
   </ion-segment-button>
 
   <!-- FBViewPostsAnfComments -->
-  <ion-segment-button icon-only *ngIf='message.actionButtons.FBViewPostsAnfComments'>
+  <ion-segment-button icon-only *ngIf='message.actionButtons.FBViewPostsAndComments' (click)="facebookViewPostAndComments('convoFB002')">
     <ion-icon name="eye" color='icons'></ion-icon>
   </ion-segment-button>
 
   <!-- retweet -->
-  <ion-segment-button icon-only *ngIf='message.actionButtons.retweet'>
+  <ion-segment-button icon-only *ngIf='message.actionButtons.retweet' (click)="retweet()">
     <ion-icon name="md-repeat" color='icons'></ion-icon>
   </ion-segment-button>
 
   <!-- TWLike -->
-  <ion-segment-button icon-only *ngIf='message.actionButtons.TWLike'>
+  <ion-segment-button icon-only *ngIf='message.actionButtons.TWLike' (click)="sendLike('twitter')">
     <ion-icon name="heart" color='icons'></ion-icon>
   </ion-segment-button>
 
   <!-- FBLike -->
-  <ion-segment-button icon-only *ngIf='message.actionButtons.FBLike'>
+  <ion-segment-button icon-only *ngIf='message.actionButtons.FBLike' (click)="sendLike(facebook)">
     <ion-icon name="thumbs-up" color='icons'></ion-icon>
   </ion-segment-button>
 
   <!-- showInFacebook -->
-  <ion-segment-button icon-only *ngIf='message.actionButtons.showInFacebook'>
+  <ion-segment-button icon-only *ngIf='message.actionButtons.showInFacebook' (click)="showInFacebook()">
     <ion-icon name="facebook" color='icons'></ion-icon>
   </ion-segment-button>
 
   <!-- FBShowMore -->
-  <ion-segment-button icon-only *ngIf='message.actionButtons.FBShowMore'>
+  <ion-segment-button icon-only *ngIf='message.actionButtons.FBShowMore' (click)="facebookShowMore()">
     <ion-icon name="facebook" color='icons'></ion-icon>
   </ion-segment-button>
 
   <!-- FBViewComments -->
-  <ion-segment-button icon-only *ngIf='message.actionButtons.FBViewComments'>
+  <ion-segment-button icon-only *ngIf='message.actionButtons.FBViewComments' (click)="facebookViewComments()">
     <ion-icon name="eye" color='icons'></ion-icon>
   </ion-segment-button>
 
   <!-- YTViewComments -->
-  <ion-segment-button icon-only *ngIf='message.actionButtons.YTViewComments'>
+  <ion-segment-button icon-only *ngIf='message.actionButtons.YTViewComments' (click)="youtubeViewComments()">
     <ion-icon name="eye" color='icons'></ion-icon>
   </ion-segment-button>
 

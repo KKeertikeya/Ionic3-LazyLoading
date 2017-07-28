@@ -7,13 +7,16 @@ import { MyApp } from './app.component';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
+import { PopoverPageModule } from '../pages/popover/popover.module';
+
 @NgModule({
   declarations: [
-    MyApp,
+    MyApp
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    PopoverPageModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [

@@ -5,13 +5,13 @@
     </button>
 
     <!-- Icon buttons -->
-    <button ion-button color="dark" small float-right icon-only clear (click)='goToInboxSettings()'>
+    <button ion-button color="dark" float-right icon-only clear (click)='goToInboxSettings()'>
       <ion-icon name="settings"></ion-icon>
     </button>
-    <button ion-button color="dark" small float-right icon-only clear (click)='goToInboxFilters()'>
+    <button ion-button color="dark"  float-right icon-only clear (click)='goToInboxFilters()'>
       <ion-icon name="funnel"></ion-icon>
     </button>
-    <button ion-button color="dark" small float-right icon-only clear (click)='goToInboxSettings()'>
+    <button ion-button color="dark"  float-right icon-only clear (click)='goToInboxSettings()'>
       <ion-icon name="search"></ion-icon>
     </button>
     <ion-title>Inbox</ion-title>
@@ -36,39 +36,41 @@
   -->
 
   <!-- Messages are shown here -->
-  <ion-card *ngFor='let message of messages | search:filteredPlatform: "platform": "sender": "text"' no-margin style="width: 100%; margin-top: 8px">
-    
-    <ion-card-header style="padding: 0px 0px 0px 2px; color: aliceblue" [style.background]= message.color>
-      <composer-summary 
-        style='font-size: 1.4em'
-        [senderName] = message.sender
-        [senderType] = message.messageType
-      >
-      </composer-summary>
-    </ion-card-header>
-    
-    <ion-card-content no-padding>
-      <composer-detail
-        [image] = 'message.image'
-        [senderName] = 'message.sender'
-        [messageDate] = 'message.messageDate | date'
-      >
-      </composer-detail>
+  <div *ngFor='let message of messages | search:filteredPlatform: "platform": "sender": "text"'>
+    <ion-card no-margin style="width: 100%; margin-top: 8px" *ngIf="!message.completed">
       
-      <hr style="margin: 0 16px 5px 16px">
+      <ion-card-header style="padding: 0px 0px 0px 2px; color: aliceblue" [style.background]= message.color>
+        <composer-summary 
+          style='font-size: 1.4em'
+          [senderName] = message.sender
+          [senderType] = message.messageType
+        >
+        </composer-summary>
+      </ion-card-header>
       
-      <post-content
-        [text] = 'message.text' 
-      >
-      </post-content>
-      
-    </ion-card-content>
+      <ion-card-content no-padding>
+        <composer-detail
+          [image] = 'message.image'
+          [senderName] = 'message.sender'
+          [messageDate] = 'message.messageDate | date'
+        >
+        </composer-detail>
+        
+        <hr style="margin: 0 16px 5px 16px">
+        
+        <post-content
+          [text] = 'message.text' 
+        >
+        </post-content>
+        
+      </ion-card-content>
 
-    <action-buttons
-      [message]="message"
-      >
-    </action-buttons>
-    
-  </ion-card>
+      <action-buttons
+        [message]="message"
+        >
+      </action-buttons>
+      
+    </ion-card>
+  </div>
 
 </ion-content>
