@@ -19,6 +19,7 @@ export class InboxPage {
   messages: MessageDataInterface[];
   filters: AllFiltersInterface;
   filteredPlatform = '';
+  displaySearchBar = "none";
 
   constructor(public navCtrl: NavController) {
      
@@ -47,7 +48,12 @@ export class InboxPage {
         }
       );
     } */
-  } 
+  }
+
+  
+  showSearchBar() {
+    this.displaySearchBar = "flex";
+  }
 
 
 }

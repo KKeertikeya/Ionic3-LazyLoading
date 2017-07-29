@@ -1,3 +1,45 @@
-page-popover {
+page-popover{
+    
+}
 
+// For all devices
+ion-popover {
+    background-color: rgba(0,0,0,0.5) !important;
+}
+
+// Android
+.popover-md .popover-content {
+    max-width: 300px !important;
+    width: 80%;
+}
+
+// iOS
+.popover-ios .popover-content {
+    max-width: 300px !important;
+    width: 80%;
+}
+
+.popover-ios .popover-arrow {
+    display: none;
+}
+
+
+// Windows
+.popover-wp .popover-content {
+    max-width: 300px !important;
+    width: 80%;
+}
+
+.item-wp.item-block .item-inner {
+    padding: 0;
+}
+
+.text-input-wp {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.scroll-content {
+    overflow-y: none;
 }

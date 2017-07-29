@@ -1,20 +1,26 @@
 <ion-header color="secondary">
   <ion-navbar>
+    
+
     <button ion-button color="dark" menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
 
+    <ion-title text-left>Inbox</ion-title>
+
     <!-- Icon buttons -->
-    <button ion-button color="dark" float-right icon-only clear (click)='goToInboxSettings()'>
-      <ion-icon name="settings"></ion-icon>
-    </button>
-    <button ion-button color="dark"  float-right icon-only clear (click)='goToInboxFilters()'>
-      <ion-icon name="funnel"></ion-icon>
-    </button>
-    <button ion-button color="dark"  float-right icon-only clear (click)='goToInboxSettings()'>
-      <ion-icon name="search"></ion-icon>
-    </button>
-    <ion-title>Inbox</ion-title>
+    <ion-buttons end>
+      <button ion-button margin-right end color="dark" float-right icon-only clear (click)='goToInboxSettings()'>
+        <ion-icon name="settings"></ion-icon>
+      </button>
+      <button ion-button margin-right end color="dark"  float-right icon-only clear (click)='goToInboxFilters()'>
+        <ion-icon name="funnel"></ion-icon>
+      </button>
+      <button ion-button margin-right end color="dark"  float-right icon-only clear (click)='showSearchBar()'>
+        <ion-icon name="search"></ion-icon>
+      </button>
+    </ion-buttons>
+    
   </ion-navbar>
 </ion-header>
 
@@ -22,7 +28,7 @@
 
 <ion-content class="pageBackground">
   <!-- Searchbar -->
-  <ion-searchbar no-padding no-margin
+  <ion-searchbar no-padding no-margin [style.display]="displaySearchBar"
     placeholder="Filter Items with Cancel"
     showCancelButton color="danger"
     (ionInput)="filterItems($event)">

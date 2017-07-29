@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { AlertController, ToastController, ModalController, PopoverController } from 'ionic-angular';
+import { AlertController, ToastController, ModalController, PopoverController, NavController } from 'ionic-angular';
 
 import { MessageDataInterface } from '../../data/messageData.interface';
 import { PopoverPage } from '../../pages/popover/popover';
@@ -11,19 +11,21 @@ import { PopoverPage } from '../../pages/popover/popover';
 export class ActionButtonsComponent {
 
   @Input() message: MessageDataInterface;
+  _navController: any;
 
   constructor (public alertCtrl: AlertController,
     private toastCtrl: ToastController,
     public modalCtrl: ModalController,
-    public popoverCtrl: PopoverController) {
+    public popoverCtrl: PopoverController,
+    public navCtrl: NavController,
+    ) {
+    
   }
 
 
 
 
-  /* 
-    Present toast
-  */
+  /* ---------------------Present Toast--------------------- */
   presentToast(msg: string) {
     let toast = this.toastCtrl.create({
       message: msg,
@@ -41,9 +43,7 @@ export class ActionButtonsComponent {
 
 
  
-  /*
-    Complete Item clicked
-  */
+  /* ---------------------Complete selected item--------------------- */
   showCompleteItemAlert () {
     let alert = this.alertCtrl.create({
       title: 'Mark as complete?',
@@ -74,81 +74,83 @@ export class ActionButtonsComponent {
 
 
 
-  /*
-    Send direct message
-  */
+  /* ---------------------Send direct message--------------------- */
   sendDirectMessage(platform: string) {}
 
 
 
 
-  /*  */
-  sendReply(platform: string, myEvent) {
-    // let profileModal = this.modalCtrl.create({ userId: 8675309 });
-    // profileModal.present();
+  /* ---------------------Send reply--------------------- */
+  sendReply(platform: string, messageType: string, myEvent) {
 
     const popover = this.popoverCtrl.create(PopoverPage);
-    popover.present({
-      ev: myEvent
-    });
+
+    let ev = {
+      target : {
+        getBoundingClientRect : () => {
+          return {
+            position: 'absolute',
+            margin: '0 auto',
+            transform: 'translateY(-50%)'
+          };
+        }
+      }
+    };
+    
+    popover.present({ev});
   }
 
 
 
-  /*  */
+  /* ---------------------Follow back--------------------- */
   followBack() {}
 
 
 
-  /*  */
-  viewLatestConversation(conversationID: string) {}
+  /* ---------------------View latest conversation--------------------- */
+  viewLatestConversation(conversationID: string) {
+    this.navCtrl.push('InboxViewLatestConversationPage');
+
+  }
 
 
 
-  /*  */
+  /* --------------------- --------------------- */
   instagramViewPostAndComments(conversationID: string) {}
 
 
 
-  /*  */
+  /* --------------------- --------------------- */
   facebookViewPostAndComments(conversationID: string) {}
 
 
 
-  /*  */
+  /* --------------------- --------------------- */
   retweet() {}
 
 
 
-  /*  */
+  /* --------------------- --------------------- */
   sendLike(platform: string) {}
 
 
 
-  /*  */
+  /* --------------------- --------------------- */
   showInFacebook() {}
 
 
 
-  /*  */
+  /* --------------------- --------------------- */
   facebookShowMore() {}
 
 
 
-  /*  */
+  /* --------------------- --------------------- */
   facebookViewComments() {}
 
 
 
-  /*  */
+  /* --------------------- --------------------- */
   youtubeViewComments() {}
 
 }
-
-
-// @Component({})
-// export class Profile {
-//   constructor(params: NavParams) {
-//     console.log('UserId', params.get('userId'));
-//   }
-// }

@@ -1,16 +1,51 @@
 <ion-content no-padding>
-  <ion-item no-margin no-padding>
-    <ion-textarea no-margin placeholder="Your message" rows="10"></ion-textarea>
+  <ion-item no-padding>
+    <ion-textarea no-margin placeholder="Type a message..." rows="12" cols="100"></ion-textarea>
   </ion-item>
 
-  <ion-segment>
-    <ion-segment-button value="camera">
-      <ion-icon name="camera"></ion-icon>
-    </ion-segment-button>
+  <ion-item no-padding no-margin>
+    <ion-label text-wrap text-center color="dark">Your post is limited to <b>5000</b> additional characters</ion-label>
+  </ion-item>
+
+  <ion-segment color="dark">
+    
     <ion-segment-button value="bookmark">
       <ion-icon name="bookmark"></ion-icon>
     </ion-segment-button>
+
+    <ion-segment-button value="attach-file">
+      <ion-icon name="attach"></ion-icon>
+    </ion-segment-button>
+
+    <ion-segment-button value="take-photo">
+      <ion-icon name="camera"></ion-icon>
+    </ion-segment-button>
+    
+    <ion-segment-button value="add-link">
+      <ion-icon name="link"></ion-icon>
+    </ion-segment-button>
+
+    <ion-segment-button value="attach-image">
+      <ion-icon name="image"></ion-icon>
+    </ion-segment-button>
+
+    <ion-segment-button value="android">
+      <ion-icon name="logo-android"></ion-icon>
+    </ion-segment-button>
+
   </ion-segment>
 
-  <button ion-button full>Send</button>
+  <!-- <button ion-button full>Send</button> -->
+
+  <ion-segment>
+
+    <ion-segment-button value="cancel" (click)="cancel()">
+      Cancel
+    </ion-segment-button>
+    
+    <ion-segment-button value="send">
+      <ion-icon name="send"></ion-icon>
+    </ion-segment-button>
+    
+  </ion-segment>
 </ion-content>
