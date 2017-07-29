@@ -12,13 +12,14 @@
   <!-- ============== Profiles Toggle ============= -->
   <ion-item-divider color="light">
     <ion-toggle
-      item-start
+      item-end
       [(ngModel)]='allProfiles'
       (click)='selectAllProfiles()'
       [disabled]="allProfiles"
     >
     </ion-toggle>
-    <ion-label>All profiles</ion-label>
+    <ion-label>Display all profiles</ion-label>
+    
   </ion-item-divider>
 
   <!-- Display first 6 profiles -->
@@ -48,13 +49,13 @@
   <!-- ============== Types Toggle ============= -->
   <ion-item-divider color="light">
     <ion-toggle
-      item-start
+      item-end
       [(ngModel)]="allTypes"
       (click)='selectAllTypes()'
       [disabled]='allTypes'
     >
     </ion-toggle>
-    <ion-label>All types</ion-label>
+    <ion-label>Display all types</ion-label>
   </ion-item-divider>
 
   <!-- Show all types -->
@@ -93,13 +94,13 @@
   <!-- ============== Tags Toggle ============= -->
   <ion-item-divider color="light">
     <ion-toggle
-      item-start
+      item-end
       [(ngModel)]="allTags"
       (click)='selectAllTags()'
       [disabled]='allTags'
     >
     </ion-toggle>
-    <ion-label>All tags</ion-label>
+    <ion-label>Remove all tags filter</ion-label>
     
   </ion-item-divider>
 
