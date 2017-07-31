@@ -95,12 +95,12 @@
   <ion-item-divider color="light">
     <ion-toggle
       item-end
-      [(ngModel)]="allTags"
-      (click)='selectAllTags()'
-      [disabled]='allTags'
+      [(ngModel)]="disableRemoveAllTags" 
+      (click)='removeAllTagsMethod()'
+      [disabled]='disableRemoveAllTags'
     >
     </ion-toggle>
-    <ion-label>Remove all tags filter</ion-label>
+    <ion-label>Remove tags filter</ion-label>
     
   </ion-item-divider>
 

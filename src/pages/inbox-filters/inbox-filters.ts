@@ -29,7 +29,7 @@ export class InboxFiltersPage implements OnInit {
   
   allProfiles: boolean;                                     // Used for toggling All profiles
   allTypes: boolean;                                        // Used for toggling All types
-  allTags: boolean;                                         // Used for toggling All tags
+  disableRemoveAllTags: boolean;                                   // Used for toggling All tags
 
 
 
@@ -42,9 +42,15 @@ export class InboxFiltersPage implements OnInit {
     this.numberOfSelectedTypes = 0;
     this.numberOfSelectedTags = 0;
 
-    this.allProfiles = true;
-    this.allTypes = true;
-    this.allTags = true;
+    this.allProfiles = false;
+    this.allTypes = false;
+    // this.removeAllTags = true;
+
+    if (this.numberOfSelectedTags === 0) {
+      this.disableRemoveAllTags = true;
+    } else {
+      this.disableRemoveAllTags = false;
+    }
 
     this.filterData = filterData;
     this.profilesLength = filterData.profiles.length;
@@ -59,9 +65,6 @@ export class InboxFiltersPage implements OnInit {
 
   // OnInit
    ngOnInit() {
-    
-    console.log("----------------OnInit-----------------");
-    
   }
 
 
@@ -78,8 +81,9 @@ export class InboxFiltersPage implements OnInit {
       this.numberOfSelectedProfiles = 0;
 
       var i: number = 0;
-      for (i = 0; i < 6; i++) {
-        this.profiles[i].selected = false;
+      for (i = 0; i < this.profiles.length; i++) {
+        if (!this.profiles[i].selected)
+          this.profiles[i].selected = true;
       }
     }
   }
@@ -110,7 +114,7 @@ export class InboxFiltersPage implements OnInit {
       this.numberOfSelectedProfiles--;
 
       if (this.numberOfSelectedProfiles === 0) {
-        this.allProfiles = true;
+        this.allProfiles = false;
       }
     }
   }
@@ -133,7 +137,7 @@ export class InboxFiltersPage implements OnInit {
       var j: number = 0;
       for (j = 0; j < this.typesLength; j++) {
         // console.log(j);
-        this.types[j].selected = false;
+        this.types[j].selected = true;
       }
     }
   }
@@ -165,7 +169,7 @@ export class InboxFiltersPage implements OnInit {
       this.numberOfSelectedTypes--;
 
       if (this.numberOfSelectedTypes === 0) {
-        this.allTypes = true;
+        this.allTypes = false;
       }
     }
   }
@@ -180,16 +184,15 @@ export class InboxFiltersPage implements OnInit {
     This method deselects the individual tags toggles
     and sets the numberOfSelectedTags to 0
   */
-  selectAllTags() {
-    if (this.allTags) {
+  removeAllTagsMethod() {
 
-      this.numberOfSelectedTags = 0;
-
-      var i: number = 0;
-      for (i = 0; i < this.tags.length; i++) {
-        this.tags[i].selected = false;
-      }
+    this.numberOfSelectedTags = 0;
+    var i: number = 0;
+    for (i = 0; i < this.tags.length; i++) {
+      this.tags[i].selected = false;
     }
+
+    this.disableRemoveAllTags = true;
   }
 
 
@@ -205,20 +208,21 @@ export class InboxFiltersPage implements OnInit {
       If yes, then deselect it.
       Else continue.
     */
-    if (this.allTags) {
-      this.allTags = false;
+    if (this.numberOfSelectedProfiles === 0) {
+      this.disableRemoveAllTags = true;
     }
 
     // If an individual tag is selected
     if (this.tags[i].selected) {
       this.numberOfSelectedTags++;
+      this.disableRemoveAllTags = false;
     }
     // If a type is deselected, increment numberOfSelectedTypes
     else {
       this.numberOfSelectedTags--;
 
       if (this.numberOfSelectedTags === 0) {
-        this.allTags = true;
+        this.disableRemoveAllTags = true;
       }
     }
   }

@@ -1,4 +1,4 @@
-<span margin-left>Receiver name will go here</span>
+<span margin-left *ngIf="messageType === 'direct message'">{{ receiverName }}</span>
 <ion-item no-margin>
   <ion-avatar item-start no-margin>
     <img src= '{{ image }}'>

@@ -9,6 +9,8 @@ export class ComposerDetailComponent {
   @Input() image: string;
   @Input() senderName: string;
   @Input() messageDate: string;
+  @Input() messageType: string;
+  @Input() receiverName: string;
 
   constructor() {
     

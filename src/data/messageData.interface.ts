@@ -1,5 +1,6 @@
 export interface MessageDataInterface {
     sender: string,
+    receiver: string,
     senderType: string,
     messageDate: Date,
     image: string,

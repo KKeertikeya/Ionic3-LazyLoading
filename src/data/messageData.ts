@@ -15,6 +15,7 @@
 export default [
     {
       sender: 'Dumbledore',
+      receiver: 'Harry Potter',
       senderType: 'HM',
       messageDate: new Date(1880, 1-1, 1),
       image: 'https://i.ytimg.com/vi/R6LkIcMB3oY/maxresdefault.jpg',
@@ -47,6 +48,7 @@ export default [
     },
     {
       sender: 'Voldy',
+      receiver: 'Harry Potter',
       senderType: 'DL',
       messageDate: new Date(1960, 12-1, 31),
       image: 'https://s1.favim.com/orig/21/boss-dumbledore-funny-harry-potter-like-a-boss-Favim.com-206937.jpg',
@@ -79,6 +81,7 @@ export default [
     },
     {
       sender: 'Snape',
+      receiver: 'Harry Potter',
       senderType: 'Prof',
       messageDate: new Date(1991, 10-1, 1),
       image: 'https://lovelace-media.imgix.net/uploads/140/61fc4b50-99a4-0132-44da-0ebc4eccb42f.jpg?',
@@ -111,6 +114,7 @@ export default [
     },
     {
       sender: 'Hermione Granger',
+      receiver: 'Harry Potter',
       senderType: 'Friend',
       messageDate: new Date(1991, 9-1, 1),
       image: 'https://thebrotherhoodofevilgeeks.files.wordpress.com/2014/03/hermione-granger-hermione-granger-20053436-936-1197.jpg',
@@ -143,6 +147,7 @@ export default [
     },
     {
       sender: 'Ron Weasley',
+      receiver: 'Harry Potter',
       senderType: 'Friend',
       messageDate: new Date(),
       image: 'https://pbs.twimg.com/profile_images/2553924396/image.jpg',
