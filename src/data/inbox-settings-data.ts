@@ -31,7 +31,7 @@ export default {
                 {
                     profileName: "eclincher_social",
                     profileType: "page",
-                    platform: "instagram"
+                    platform: "facebook"
                 }
             ]
         },

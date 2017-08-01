@@ -6,6 +6,7 @@ import { InboxPage } from './inbox';
 import { InboxFiltersPageModule } from '../inbox-filters/inbox-filters.module';
 import { InboxSettingsPageModule } from '../inbox-settings/inbox-settings.module';
 import { InboxViewLatestConversationPageModule } from '../inbox-view-latest-conversation/inbox-view-latest-conversation.module';
+import { InboxReplyToPostPageModule } from '../inbox-reply-to-post/inbox-reply-to-post.module';
 // import { InboxTagsPageModule } from '../inbox-tags/inbox-tags.module';
 
 // Generic components
@@ -30,6 +31,7 @@ import { InboxSearchPipeModule } from '../../pipes/inboxSearchPipe.module';
     InboxFiltersPageModule,
     InboxSettingsPageModule,
     InboxViewLatestConversationPageModule,
+    InboxReplyToPostPageModule,
 
     // Component and pipe modules that are being used
     ComposerSummaryComponentModule,

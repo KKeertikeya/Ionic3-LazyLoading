@@ -31,4 +31,12 @@ export class InboxSettingsPage {
       this.logos[i] = "logo-".concat(this.profileOwners[i].profiles[0].platform.toString());
     }
   }
+
+  goToIndividualProfileSettings(profile: any, ownerName: string) {
+    let data = {
+      profile,
+      ownerName
+    }
+    this.navCtrl.push('InboxSettingsIndividualProfilesPage', data);
+  }
 }

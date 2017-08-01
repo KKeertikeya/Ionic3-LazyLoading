@@ -74,6 +74,17 @@ export class ActionButtonsComponent {
 
 
 
+  /* ---------------------reply to post--------------------- */
+  replyToPost() {
+    let data = {
+      msg : this.message
+    };
+    
+    let modal = this.modalCtrl.create('InboxReplyToPostPage', data);
+    modal.present();
+  }
+
+
   /* ---------------------Send direct message--------------------- */
   sendDirectMessage(platform: string) {}
 

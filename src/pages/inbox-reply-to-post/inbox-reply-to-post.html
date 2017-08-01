@@ -1,0 +1,57 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Reply to {{ message.messageType }}</ion-title>
+    <ion-buttons end>
+      <button ion-button margin-right end color="dark" float-right icon-only clear (click)="dismissModal()">
+        <ion-icon name="close"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <ion-card no-margin style="width: 100%;">
+
+    <ion-card-header style="padding: 0px 0px 0px 2px; color: aliceblue" [style.background]= message.color>
+      <composer-summary 
+        style='font-size: 1.4em'
+        [senderName] = message.sender
+        [senderType] = message.messageType
+      >
+      </composer-summary>
+    </ion-card-header>
+    
+    <ion-card-content no-padding>
+      <composer-detail
+        [image] = 'message.image'
+        [senderName] = 'message.sender'
+        [messageDate] = 'message.messageDate | date'
+        [messageType] = 'message.messageType'
+        [receiverName] = 'message.receiver'
+      >
+      </composer-detail>
+      
+      <hr style="margin: 0 16px 5px 16px">
+      
+      <post-content
+        [text] = 'message.text' 
+      >
+      </post-content>
+      
+    </ion-card-content>
+
+  </ion-card>
+
+  <ion-item no-margin margin-top no-padding>
+    <ion-textarea placeholder="Type your message..." rows="2" cols="80"></ion-textarea>
+  </ion-item>
+  
+</ion-content>
+
+<ion-footer>
+    <button ion-button clear no-margin style="width:49%">Send</button>
+    <button ion-button clear no-margin style="width:49%">Cancel</button>
+</ion-footer>

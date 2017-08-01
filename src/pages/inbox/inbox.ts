@@ -52,8 +52,10 @@ export class InboxPage {
 
   
   showSearchBar() {
-    this.displaySearchBar = "flex";
+    if (this.displaySearchBar === "none")
+      this.displaySearchBar = "flex";
+    else
+      this.displaySearchBar = "none";
   }
-
 
 }

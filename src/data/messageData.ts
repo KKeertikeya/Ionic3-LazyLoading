@@ -15,6 +15,8 @@
 export default [
     {
       sender: 'Dumbledore',
+      senderID: 'sender007',
+      messageID: 'message007',
       receiver: 'Harry Potter',
       senderType: 'HM',
       messageDate: new Date(1880, 1-1, 1),
@@ -48,6 +50,8 @@ export default [
     },
     {
       sender: 'Voldy',
+      senderID: 'sender007',
+      messageID: 'message007',
       receiver: 'Harry Potter',
       senderType: 'DL',
       messageDate: new Date(1960, 12-1, 31),
@@ -81,6 +85,8 @@ export default [
     },
     {
       sender: 'Snape',
+      senderID: 'sender007',
+      messageID: 'message007',
       receiver: 'Harry Potter',
       senderType: 'Prof',
       messageDate: new Date(1991, 10-1, 1),
@@ -114,6 +120,8 @@ export default [
     },
     {
       sender: 'Hermione Granger',
+      senderID: 'sender007',
+      messageID: 'message007',
       receiver: 'Harry Potter',
       senderType: 'Friend',
       messageDate: new Date(1991, 9-1, 1),
@@ -147,6 +155,8 @@ export default [
     },
     {
       sender: 'Ron Weasley',
+      senderID: 'sender007',
+      messageID: 'message007',
       receiver: 'Harry Potter',
       senderType: 'Friend',
       messageDate: new Date(),

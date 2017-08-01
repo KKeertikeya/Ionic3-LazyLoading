@@ -13,32 +13,32 @@
   </ion-segment-button>
     
   <!-- TWSendDirectMessage -->
-  <ion-segment-button icon-only *ngIf='message.actionButtons.TWSendDirectMessage' (click)="sendReply('twitter', 'direct message', $event)">
+  <ion-segment-button icon-only *ngIf='message.actionButtons.TWSendDirectMessage' (click)="replyToPost()">
     <ion-icon name="mail" color='icons'></ion-icon>
   </ion-segment-button>
   
   <!-- FBSendDirectMessage -->
-  <ion-segment-button icon-only *ngIf='message.actionButtons.FBSendDirectMessage' (click)="sendReply('facebook', 'direct message', $event)">
+  <ion-segment-button icon-only *ngIf='message.actionButtons.FBSendDirectMessage' (click)="replyToPost()">
     <ion-icon name="mail" color='icons'></ion-icon>
   </ion-segment-button>
   
   <!-- TWReply -->
-  <ion-segment-button icon-only *ngIf='message.actionButtons.TWReply' (click)="sendReply('twitter', 'other type of message', $event)">
+  <ion-segment-button icon-only *ngIf='message.actionButtons.TWReply' (click)="replyToPost()">
     <ion-icon name="ios-undo" color='icons'></ion-icon>
   </ion-segment-button>
   
   <!-- FBReply -->
-  <ion-segment-button icon-only *ngIf='message.actionButtons.FBReply' (click)="sendReply('facebook', 'other type of message', $event)">
+  <ion-segment-button icon-only *ngIf='message.actionButtons.FBReply' (click)="replyToPost()">
     <ion-icon name="ios-undo" color='icons'></ion-icon>
   </ion-segment-button>
   
   <!-- YTReply -->
-  <ion-segment-button icon-only *ngIf='message.actionButtons.YTReply' (click)="sendReply('youtube', 'other type of message', $event)">
+  <ion-segment-button icon-only *ngIf='message.actionButtons.YTReply' (click)="replyToPost()">
     <ion-icon name="ios-undo" color='icons'></ion-icon>
   </ion-segment-button>
 
   <!-- INReply -->
-  <ion-segment-button icon-only *ngIf='message.actionButtons.INReply' (click)="sendReply('instagram', 'other type of message', $event)">
+  <ion-segment-button icon-only *ngIf='message.actionButtons.INReply' (click)="replyToPost()">
     <ion-icon name="ios-undo" color='icons'></ion-icon>
   </ion-segment-button>
 

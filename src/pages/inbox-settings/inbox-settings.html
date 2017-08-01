@@ -29,8 +29,7 @@
       <ion-toggle></ion-toggle>
     </ion-item>
 
-    <ion-item-divider color="light" >Select profiles to show in your Inbox</ion-item-divider>
-
+    <ion-item-divider color="light">Select profiles to show in your Inbox</ion-item-divider>
 
     <!-- Profiles -->
     <ion-list *ngFor="let owner of profileOwners; let i = index">
@@ -42,10 +41,11 @@
           <ion-icon [name]="logos[i]"></ion-icon>
           {{ owner.name }}
         </ion-label>
-        <ion-toggle></ion-toggle>
+        <!-- <ion-toggle></ion-toggle> -->
       </ion-list-header>
-      <ion-item *ngFor="let profile of owner.profiles">
+      <button ion-item *ngFor="let profile of owner.profiles" (click)="goToIndividualProfileSettings(profile, owner.name)">
         <span style="font-size: 0.9em">{{ profile.profileName }}</span>
-      </ion-item>
+        <ion-icon item-end name="ios-arrow-forward" color="light"></ion-icon>
+      </button>
     </ion-list>
 </ion-content>
