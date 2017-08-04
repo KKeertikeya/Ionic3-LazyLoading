@@ -18,28 +18,43 @@
       [disabled]="allProfiles"
     >
     </ion-toggle>
-    <ion-label>Display all profiles</ion-label>
+    <ion-label>Profiles filter</ion-label>
     
   </ion-item-divider>
 
   <!-- Display first 6 profiles -->
   <ion-row *ngFor="let profiles of filterData.profiles | rowPipe:2 | slice:0:1" col-12 no-padding no-margin style="width:100%;">
-    <ion-card *ngFor="let profiles of filterData.profiles; let i = index" no-margin no-padding style="margin-left: 8px; margin-top: 8px;padding-left: 8px; width: 47%">
-       <ion-item no-padding no-margin *ngIf="i < 6">
-          <ion-label color="dark" stacked>
-            {{ profiles.profileName }}
-          </ion-label>
-          <!-- When clicked, all individual selected profiles will be unchecked -->
-          <ion-toggle [(ngModel)]='profiles["selected"]' (click)="selectIndividualProfiles(i)"></ion-toggle>
-        </ion-item>
-      </ion-card>
+      <ng-container *ngFor="let profiles of filterData.profiles; let i = index">
+        
+        <ion-card no-margin *ngIf="i < 6" no-padding style="margin-left: 8px; margin-top: 8px;padding-left: 8px; width: 47%">
+          <ion-item no-padding no-margin>
+            <ion-label color="dark" stacked>
+              {{ profiles.profileName }}
+            </ion-label>
+            <!-- When clicked, all individual selected profiles will be unchecked -->
+            <ion-toggle [(ngModel)]='profiles["selected"]' (click)="selectIndividualProfiles(i)"></ion-toggle>
+          </ion-item>
+        </ion-card>
+
+        <ion-card *ngIf="i > 5 && showMore" [style.display]="showMore" no-padding style="margin: 8px 0 0 8px ;padding-left: 8px; width: 47%">
+          <ion-item no-padding no-margin>
+            <ion-label color="dark" stacked>
+              {{ profiles.profileName }}
+            </ion-label>
+            <!-- When clicked, all individual selected profiles will be unchecked -->
+            <ion-toggle [(ngModel)]='profiles["selected"]' (click)="selectIndividualProfiles(i)"></ion-toggle>
+          </ion-item>
+        </ion-card>
+
+      </ng-container>
   </ion-row>
 
   <!-- Show more profiles button -->
-  <div no-padding>
-    <ion-segment [(ngModel)]="showMoreProfiles" *ngIf="filterData.profiles.length > 6">
-      <ion-segment-button value="moreProfiles">
-        Show More
+  <div no-padding margin-top>
+    <ion-segment>
+      <ion-segment-button value="moreProfiles" (click)="showMoreProfiles()">
+        <span *ngIf="showMore">Show Less</span>
+        <span *ngIf="!showMore">Show More</span>
       </ion-segment-button>
     </ion-segment>
   </div>
@@ -55,7 +70,7 @@
       [disabled]='allTypes'
     >
     </ion-toggle>
-    <ion-label>Display all types</ion-label>
+    <ion-label>Types filter</ion-label>
   </ion-item-divider>
 
   <!-- Show all types -->
@@ -73,7 +88,7 @@
               no-margin
             >
             </ion-icon> 
-            {{ types.type }}
+            {{ types.type |titlecase}}
           </span>
         </ion-label>
 
@@ -100,7 +115,7 @@
       [disabled]='disableRemoveAllTags'
     >
     </ion-toggle>
-    <ion-label>Remove tags filter</ion-label>
+    <ion-label>Tags filter</ion-label>
     
   </ion-item-divider>
 
@@ -110,7 +125,7 @@
     <ion-card *ngFor="let tags of filterData.tags; let i = index" no-margin no-padding style="margin-left: 8px; margin-top: 8px;padding-left: 8px; width: 47%">
       <ion-item no-padding no-margin>
         <ion-label  stacked>
-          {{ tags.name }}
+          {{ tags.name |titlecase}}
         </ion-label>
         <!-- When clicked, all individual selected tags will be unchecked -->
         <ion-toggle
@@ -124,3 +139,9 @@
   </ion-row>
 
 </ion-content>
+
+
+<ion-footer style="padding: 8px 0 8px 0">
+  <button ion-button clear no-margin style="width:49%">Save</button>
+  <button ion-button clear no-margin style="width:49%">Cancel</button>
+</ion-footer>

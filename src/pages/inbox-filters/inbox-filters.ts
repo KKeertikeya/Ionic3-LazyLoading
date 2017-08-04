@@ -14,6 +14,8 @@ import filterData from '../../data/filterData';
 export class InboxFiltersPage implements OnInit {
 
   // Data declaration
+  showMore: boolean = false;
+
   numberOfSelectedProfiles: number;                       // Keeps track of the number of profiles that are selected for toggling All Profiles
   numberOfSelectedTypes: number;                          // Keeps track of the number of profiles that are selected for toggling All Types
   numberOfSelectedTags: number;                           // Keeps track of the number of profiles that are selected for toggling All Tags
@@ -42,7 +44,7 @@ export class InboxFiltersPage implements OnInit {
     this.numberOfSelectedTypes = 0;
     this.numberOfSelectedTags = 0;
 
-    this.allProfiles = false;
+    this.allProfiles = true;
     this.allTypes = false;
     // this.removeAllTags = true;
 
@@ -64,7 +66,11 @@ export class InboxFiltersPage implements OnInit {
 
 
   // OnInit
-   ngOnInit() {
+  ngOnInit() {
+  }
+   
+  showMoreProfiles() {
+    this.showMore = !this.showMore;
   }
 
 
@@ -82,8 +88,8 @@ export class InboxFiltersPage implements OnInit {
 
       var i: number = 0;
       for (i = 0; i < this.profiles.length; i++) {
-        if (!this.profiles[i].selected)
-          this.profiles[i].selected = true;
+        // if (this.profiles[i].selected)
+          this.profiles[i].selected = false;
       }
     }
   }
@@ -107,6 +113,7 @@ export class InboxFiltersPage implements OnInit {
 
     // If a profile is selected, increment numberOfSelectedProfiles
     if (this.profiles[i].selected) {
+      this.allProfiles = false;
       this.numberOfSelectedProfiles++;
     }
     // If a profile is deselected, increment numberOfSelectedProfiles
@@ -114,7 +121,7 @@ export class InboxFiltersPage implements OnInit {
       this.numberOfSelectedProfiles--;
 
       if (this.numberOfSelectedProfiles === 0) {
-        this.allProfiles = false;
+        this.allProfiles = true;
       }
     }
   }
