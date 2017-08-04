@@ -14,6 +14,9 @@
         <ion-icon name="settings"></ion-icon>
       </button>
       <button ion-button margin-right end color="dark"  float-right icon-only clear (click)='goToInboxFilters()'>
+        <!-- add this code in the above statement to change color on filter selection
+          [style.color]="<property which will let us know if any filters have been added> ? '	#DAA520': 'white'" 
+        -->
         <ion-icon name="funnel"></ion-icon>
       </button>
       <button ion-button margin-right end color="dark"  float-right icon-only clear (click)='showSearchBar()'>
