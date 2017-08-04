@@ -11,7 +11,7 @@ import filterData from '../../data/filterData';
 export class InboxTagsPage {
 
   // Variable declaration
-  tagData: any;
+  tagData: any[];
 
   // Constructor
   constructor(public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController) {
@@ -42,7 +42,14 @@ export class InboxTagsPage {
         {
           text: 'OK',
           handler: data => {
+            // console.log(data.newTagName);
             
+            let newTag = {
+              name: data.newTagName,
+              selected: false
+            }
+            
+            this.tagData.push(newTag);
           }
         }
       ]
@@ -50,4 +57,16 @@ export class InboxTagsPage {
     alert.present();
   }
 
+
+
+  tagsSaveButton() {
+    console.log("Footer button clicked: Save");
+  }
+
+  tagsCancelButton() {
+    // console.log("Footer button clicked: Cancel");
+
+    this.navCtrl.pop();
+  }
+  
 }

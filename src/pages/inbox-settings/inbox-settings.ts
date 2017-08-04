@@ -39,4 +39,16 @@ export class InboxSettingsPage {
     }
     this.navCtrl.push('InboxSettingsIndividualProfilesPage', data);
   }
+
+
+  settingsSaveButton() {
+    console.log("Settings button clicked: Save");
+  }
+
+  settingsCancelButton() {
+    // console.log("Settings button clicked: Cancel");
+
+    this.navCtrl.pop();
+  }
+
 }

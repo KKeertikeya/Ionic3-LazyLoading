@@ -1,9 +1,9 @@
 <!-- Generated template for the ComposerSummaryComponent component -->
- 
+
 
 <span style="font-size: 0.7em">
-  <ion-icon name="logo-facebook" style="margin-left: 4px; margin-right: 4px; font-size: 1em"></ion-icon>
-  {{ senderName }} {{ senderType }}
+  <ion-icon name="logo-{{platform}}" style="margin-left: 4px; margin-right: 4px; font-size: 1em"></ion-icon>
+  {{ senderName }} - {{ senderType }}
 </span>
 <button 
     ion-button 
@@ -15,5 +15,5 @@
     no-margin
     (click)="goToTagsPage()"
 >
-  <ion-icon item-end name="ios-pricetag"></ion-icon>
+  <ion-icon item-end name="ios-pricetags" [style.color]="tags[0] ? '	#DAA520': 'white'"></ion-icon>
 </button>

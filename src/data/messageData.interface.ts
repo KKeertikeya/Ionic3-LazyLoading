@@ -12,5 +12,6 @@ export interface MessageDataInterface {
     messageType: string,
     conversationID: string,
     completed: boolean,
+    tags: string[],
     actionButtons: any,
 }

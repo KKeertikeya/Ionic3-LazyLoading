@@ -12,7 +12,7 @@
     <ion-card *ngFor="let tag of tagData" no-margin no-padding padding-left style="margin-left: 8px; margin-top: 8px; width: 47%">
       <ion-item no-padding no-margin>
         <ion-label color="dark" stacked>
-          {{ tag.name | titlecase}}
+          {{ tag.name }}
         </ion-label>
         <ion-toggle checked="false"></ion-toggle>
       </ion-item>
@@ -25,6 +25,6 @@
 </ion-content>
 
 <ion-footer style="padding: 8px 0 8px 0">
-  <button ion-button clear no-margin style="width:49%">Save</button>
-  <button ion-button clear no-margin style="width:49%">Cancel</button>
+  <button ion-button clear no-margin style="width:49%" (click)="tagsSaveButton()">Save</button>
+  <button ion-button clear no-margin style="width:49%" (click)="tagsCancelButton()">Cancel</button>
 </ion-footer>

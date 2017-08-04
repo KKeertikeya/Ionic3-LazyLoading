@@ -25,6 +25,8 @@ export class InboxPage {
      
     this.messages = allMessages;
     this.filters = appliedFilters;
+
+    // console.log(this.messages[1].tags);
   }
 
   goToInboxSettings() {

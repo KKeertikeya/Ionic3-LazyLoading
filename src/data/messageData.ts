@@ -27,6 +27,9 @@ export default [
       messageType: 'direct message',
       conversationID: 'ad001',
       completed: false,
+      tags: [
+        "important",
+      ],
       actionButtons: {
         completeItem: true,
         TWSendDirectMessage: false,
@@ -62,6 +65,9 @@ export default [
       messageType: 'comment',
       conversationID: 'tmr008',
       completed: false,
+      tags: [
+        
+      ],
       actionButtons: {
         completeItem: true,
         TWSendDirectMessage: false,
@@ -97,6 +103,9 @@ export default [
       messageType: 'page comment',
       conversationID: 'ss007',
       completed: false,
+      tags: [
+        
+      ],
       actionButtons: {
         completeItem: true,
         TWSendDirectMessage: false,
@@ -132,6 +141,9 @@ export default [
       messageType: 'direct message',
       conversationID: 'hg002',
       completed: false,
+      tags: [
+        
+      ],
       actionButtons: {
         completeItem: true,
         TWSendDirectMessage: false,
@@ -167,6 +179,9 @@ export default [
       messageType: 'retweet',
       conversationID: 'rw001',
       completed: false,
+      tags: [
+        
+      ],
       actionButtons: {
         completeItem: true,
         TWSendDirectMessage: false,

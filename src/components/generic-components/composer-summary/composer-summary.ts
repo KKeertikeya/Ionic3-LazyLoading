@@ -8,8 +8,12 @@ import { AlertController, NavController } from 'ionic-angular';
 })
 export class ComposerSummaryComponent {
 
+  @Input() platform: string;
   @Input() senderName: string;
   @Input() senderType: string;
+  @Input() tags: any;
+
+  tagsLength: number;
 
   testCheckboxOpen;
   testCheckboxResult;
@@ -17,31 +21,9 @@ export class ComposerSummaryComponent {
   newLabel: string = '';
   newValue: string = '';
 
-  /* tags = [
-    {
-      lable: 'Important',
-      value: 'important'
-    },
-    {
-      lable: 'Test',
-      value: 'test'
-    },
-    {
-      lable: 'Leads',
-      value: 'leads'
-    },
-    {
-      lable: 'Followup',
-      value: 'followup'
-    },
-    {
-      lable: 'Positive',
-      value: 'positive'
-    }
-  ] */
-
   constructor(private alertCtrl: AlertController, private navCtrl: NavController) {
-    
+    // this.tagsLength = this.tags.length;
+    // console.log("Getting tagsLength " + this.senderName);
   }
 
   goToTagsPage() {

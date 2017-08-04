@@ -233,4 +233,13 @@ export class InboxFiltersPage implements OnInit {
       }
     }
   }
+
+
+  filterSaveButton() {
+    console.log("Save button clicked!");
+  }
+
+  filtersCancelButton() {
+    this.navCtrl.pop();
+  }
 }

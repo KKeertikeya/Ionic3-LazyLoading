@@ -48,8 +48,10 @@
       <ion-card-header style="padding: 0px 0px 0px 2px; color: aliceblue" [style.background]= message.color>
         <composer-summary 
           style='font-size: 1.4em'
+          [platform] = message.platform
           [senderName] = message.sender
           [senderType] = message.messageType
+          [tags] = "message.tags"
         >
         </composer-summary>
       </ion-card-header>

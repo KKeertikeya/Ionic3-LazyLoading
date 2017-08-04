@@ -79,16 +79,17 @@
     <ion-card *ngFor="let types of filterData.types; let i = index" no-margin no-padding style="margin-left: 8px; margin-top: 8px;padding-left: 8px; width: 47%">
       <ion-item no-padding no-margin>
         <ion-label no-padding no-margin stacked>
-          <span style = 'font-size: 1.2em' no-padding no-margin>
+          <span style = 'font-size: 1em; font-weight: light' no-padding no-margin>
             <ion-icon
               [name]='types.icon'
               [color]='types.platform'
               item-left
               no-padding
               no-margin
+              style='margin-right: 0; padding: 0'
             >
             </ion-icon> 
-            {{ types.type |titlecase}}
+            {{types.type |titlecase}}
           </span>
         </ion-label>
 
@@ -106,17 +107,31 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
   <!-- ============== Tags Toggle ============= -->
   <ion-item-divider color="light">
-    <ion-toggle
+    <!-- <ion-toggle
       item-end
       [(ngModel)]="disableRemoveAllTags" 
       (click)='removeAllTagsMethod()'
       [disabled]='disableRemoveAllTags'
     >
-    </ion-toggle>
-    <ion-label>Tags filter</ion-label>
-    
+  </ion-toggle> -->
+    <p>Tags filter</p>
+    <button ion-button clear item-end>EDIT</button>
+    <button ion-button clear item-end>CLEAR</button>
+    <!-- <ion-label>Tags filter</ion-label> -->
   </ion-item-divider>
 
   <!-- Show all tags -->
@@ -125,7 +140,8 @@
     <ion-card *ngFor="let tags of filterData.tags; let i = index" no-margin no-padding style="margin-left: 8px; margin-top: 8px;padding-left: 8px; width: 47%">
       <ion-item no-padding no-margin>
         <ion-label  stacked>
-          {{ tags.name |titlecase}}
+          <!-- {{ tags.name |titlecase}} -->
+          {{ tags.name }}
         </ion-label>
         <!-- When clicked, all individual selected tags will be unchecked -->
         <ion-toggle
@@ -142,6 +158,6 @@
 
 
 <ion-footer style="padding: 8px 0 8px 0">
-  <button ion-button clear no-margin style="width:49%">Save</button>
-  <button ion-button clear no-margin style="width:49%">Cancel</button>
+  <button ion-button clear no-margin style="width:49%" (click)="filterSaveButton()">Save</button>
+  <button ion-button clear no-margin style="width:49%" (click)="filtersCancelButton()">Cancel</button>
 </ion-footer>
