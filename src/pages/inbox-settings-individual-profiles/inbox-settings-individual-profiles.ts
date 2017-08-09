@@ -11,10 +11,16 @@ export class InboxSettingsIndividualProfilesPage {
   addProfile: boolean = true;
   ownerName: string;
   profile: any;
+  initialProfileState: boolean[] = [];
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController) {
     this.ownerName = this.navParams.get('ownerName');
     this.profile = this.navParams.get('profile');
+
+    var i: number;
+    for (i = 0; i < this.profile.options.length; i++) {
+      this.initialProfileState[i] = this.profile.options[i].selected;
+    }
   }
 
   ionViewDidLoad() {
@@ -34,6 +40,10 @@ export class InboxSettingsIndividualProfilesPage {
             text: 'Confirm',
             handler: ()=> {
               // add code for confirm handler here
+              var i: number;
+              for (i = 0; i < this.profile.options.length; i++) {
+                this.profile.options[i].selected = false;
+              }
             }
           },
           {
@@ -56,7 +66,34 @@ export class InboxSettingsIndividualProfilesPage {
   }
 
   cancelIndividualSettings() {
-    this.navCtrl.pop();
+    
+    let alert = this.alertCtrl.create({
+      title: "Confirm",
+      subTitle: "Do you want to discard changes?",
+      buttons: [
+        {
+          text: "Yes",
+          handler: ()=> {
+              var i: number;
+              for (i = 0; i < this.profile.options.length; i++) {
+                this.profile.options[i].selected = this.initialProfileState[i];
+              }
+
+              this.navCtrl.pop();
+            }
+        },
+        {
+          text: "No",
+          role: "cancel",
+          handler: ()=> {
+            // handler for cancel button
+            // do nothing, just close the alert
+          }
+        }
+      ]
+    });
+
+    alert.present();
   }
 
 }

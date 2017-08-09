@@ -6,32 +6,212 @@ export default {
                 {
                     profileName: 'Kotomatrix',
                     profileType: "page",
-                    platform: "facebook"
+                    platform: "facebook",
+                    options: [
+                        {
+                            type: "Direct Messages",
+                            selected: true
+                        },
+                        {
+                            type: "Comments",
+                            selected: true
+                        },
+                        {
+                            type: "Likes",
+                            selected: true
+                        },
+                        {
+                            type: "Reviews",
+                            selected: true
+                        },
+                        {
+                            type: "Shares",
+                            selected: true
+                        },
+                        {
+                            type: "Wall posts",
+                            selected: true
+                        },
+                        {
+                            type: "Others",
+                            selected: true
+                        }
+                    ]
                 },
                 {
                     profileName: "LadyGaga",
                     profileType: "page",
-                    platform: "facebook"
+                    platform: "facebook",
+                    options: [
+                        {
+                            type: "Direct Messages",
+                            selected: true
+                        },
+                        {
+                            type: "Comments",
+                            selected: true
+                        },
+                        {
+                            type: "Likes",
+                            selected: true
+                        },
+                        {
+                            type: "Reviews",
+                            selected: true
+                        },
+                        {
+                            type: "Shares",
+                            selected: true
+                        },
+                        {
+                            type: "Wall posts",
+                            selected: true
+                        },
+                        {
+                            type: "Others",
+                            selected: true
+                        }
+                    ]
                 },
                 {
                     profileName: "Mytestpage",
                     profileType: "page",
-                    platform: "facebook"
+                    platform: "facebook",
+                    options: [
+                        {
+                            type: "Direct Messages",
+                            selected: true
+                        },
+                        {
+                            type: "Comments",
+                            selected: true
+                        },
+                        {
+                            type: "Likes",
+                            selected: true
+                        },
+                        {
+                            type: "Reviews",
+                            selected: true
+                        },
+                        {
+                            type: "Shares",
+                            selected: true
+                        },
+                        {
+                            type: "Wall posts",
+                            selected: true
+                        },
+                        {
+                            type: "Others",
+                            selected: true
+                        }
+                    ]
                 },
                 {
                     profileName: "Ron Cedar",
                     profileType: "page",
-                    platform: "facebook"
+                    platform: "facebook",
+                    options: [
+                        {
+                            type: "Direct Messages",
+                            selected: true
+                        },
+                        {
+                            type: "Comments",
+                            selected: true
+                        },
+                        {
+                            type: "Likes",
+                            selected: true
+                        },
+                        {
+                            type: "Reviews",
+                            selected: true
+                        },
+                        {
+                            type: "Shares",
+                            selected: true
+                        },
+                        {
+                            type: "Wall posts",
+                            selected: true
+                        },
+                        {
+                            type: "Others",
+                            selected: true
+                        }
+                    ]
                 },
                 {
                     profileName: "Ronit-test",
                     profileType: "page",
-                    platform: "facebook"
+                    platform: "facebook",
+                    options: [
+                        {
+                            type: "Direct Messages",
+                            selected: true
+                        },
+                        {
+                            type: "Comments",
+                            selected: true
+                        },
+                        {
+                            type: "Likes",
+                            selected: true
+                        },
+                        {
+                            type: "Reviews",
+                            selected: true
+                        },
+                        {
+                            type: "Shares",
+                            selected: true
+                        },
+                        {
+                            type: "Wall posts",
+                            selected: true
+                        },
+                        {
+                            type: "Others",
+                            selected: true
+                        }
+                    ]
                 },
                 {
                     profileName: "eclincher_social",
                     profileType: "page",
-                    platform: "facebook"
+                    platform: "facebook",
+                    options: [
+                        {
+                            type: "Direct Messages",
+                            selected: true
+                        },
+                        {
+                            type: "Comments",
+                            selected: true
+                        },
+                        {
+                            type: "Likes",
+                            selected: true
+                        },
+                        {
+                            type: "Reviews",
+                            selected: true
+                        },
+                        {
+                            type: "Shares",
+                            selected: true
+                        },
+                        {
+                            type: "Wall posts",
+                            selected: true
+                        },
+                        {
+                            type: "Others",
+                            selected: true
+                        }
+                    ]
                 }
             ]
         },
@@ -41,7 +221,13 @@ export default {
                 {
                     profileName: "play1app",
                     profileType: "user",
-                    platform: "instagram"
+                    platform: "instagram",
+                    options: [
+                        {
+                            type: "Comments",
+                            selected: true
+                        }
+                    ]
                 }
             ]
         },
@@ -51,7 +237,25 @@ export default {
                 {
                     profileName: "RonCedar",
                     profileType: "user",
-                    platform: "twitter"
+                    platform: "twitter",
+                    options: [
+                        {
+                            type: "Direct messanges",
+                            selected: true
+                        },
+                        {
+                            type: "New followers",
+                            selected: true
+                        },
+                        {
+                            type: "Mentions",
+                            selected: true
+                        },
+                        {
+                            type: "Retweets",
+                            selected: true
+                        }
+                    ]
                 }
             ]
         },
@@ -61,7 +265,25 @@ export default {
                 {
                     profileName: "ronitf",
                     profileType: "user",
-                    platform: "twitter"
+                    platform: "twitter",
+                    options: [
+                        {
+                            type: "Direct messanges",
+                            selected: true
+                        },
+                        {
+                            type: "New followers",
+                            selected: true
+                        },
+                        {
+                            type: "Mentions",
+                            selected: true
+                        },
+                        {
+                            type: "Retweets",
+                            selected: true
+                        }
+                    ]
                 }
             ]
         },
@@ -71,7 +293,25 @@ export default {
                 {
                     profileName: "ecnewmode",
                     profileType: "user",
-                    platform: "twitter"
+                    platform: "twitter",
+                    options: [
+                        {
+                            type: "Direct messanges",
+                            selected: true
+                        },
+                        {
+                            type: "New followers",
+                            selected: true
+                        },
+                        {
+                            type: "Mentions",
+                            selected: true
+                        },
+                        {
+                            type: "Retweets",
+                            selected: true
+                        }
+                    ]
                 }
             ]
         },
@@ -81,7 +321,13 @@ export default {
                 {
                     profileName: "TEST PAGE1",
                     profileType: "user",
-                    platform: "youtube"
+                    platform: "youtube",
+                    options: [
+                        {
+                            type: "Comments",
+                            selected: true
+                        }
+                    ]
                 }
             ]
         },
@@ -91,7 +337,13 @@ export default {
                 {
                     profileName: "QA-Test",
                     profileType: "page",
-                    platform: "googleplus"
+                    platform: "googleplus",
+                    options: [
+                        {
+                            type: "Page comments",
+                            selected: true
+                        }
+                    ]
                 }
             ]
         }

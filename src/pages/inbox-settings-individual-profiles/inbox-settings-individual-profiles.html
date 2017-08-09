@@ -15,145 +15,15 @@
 
   <ion-item-divider color="light">Selected items will be will be displayed in your Inbox</ion-item-divider>
 
-  <!-- <ion-list>
-    <ion-item *ngIf="profile.profileType==='page' && profile.platform==='facebook'">
-      <ion-label>Direct Messages</ion-label>
-      <ion-toggle checked="true"></ion-toggle>
-    </ion-item>
-
-    <ion-item *ngIf="profile.profileType==='page' && profile.platform==='facebook'">
-      <ion-label>Comments</ion-label>
-      <ion-toggle checked="true"></ion-toggle>
-    </ion-item>
-
-    <ion-item *ngIf="profile.profileType==='page' && profile.platform==='facebook'">
-      <ion-label>Likes</ion-label>
-      <ion-toggle checked="true"></ion-toggle>
-    </ion-item>
-
-    <ion-item *ngIf="profile.profileType==='page' && profile.platform==='facebook'">
-      <ion-label>Reviews</ion-label>
-      <ion-toggle checked="true"></ion-toggle>
-    </ion-item>
-
-    <ion-item *ngIf="profile.profileType==='page' && profile.platform==='facebook'">
-      <ion-label>Shares</ion-label>
-      <ion-toggle checked="true"></ion-toggle>
-    </ion-item>
-
-    <ion-item *ngIf="profile.profileType==='page' && profile.platform==='facebook'">
-      <ion-label>Wall Posts</ion-label>
-      <ion-toggle checked="true"></ion-toggle>
-    </ion-item>
-
-    <ion-item *ngIf="profile.profileType==='page' && profile.platform==='facebook'">
-      <ion-label>Others</ion-label>
-      <ion-toggle checked="true"></ion-toggle>
-    </ion-item>
-
-    <ion-item *ngIf="profile.profileType==='user' && profile.platform==='instagram'">
-      <ion-label>Comments</ion-label>
-      <ion-toggle checked="true"></ion-toggle>
-    </ion-item>
-
-    <ion-item *ngIf="profile.profileType==='user' && profile.platform==='twitter'">
-      <ion-label>Direct messages</ion-label>
-      <ion-toggle checked="true"></ion-toggle>
-    </ion-item>
-
-    <ion-item *ngIf="profile.profileType==='user' && profile.platform==='twitter'">
-      <ion-label>New followers</ion-label>
-      <ion-toggle checked="true"></ion-toggle>
-    </ion-item>
-
-    <ion-item *ngIf="profile.profileType==='user' && profile.platform==='twitter'">
-      <ion-label>Mentions</ion-label>
-      <ion-toggle checked="true"></ion-toggle>
-    </ion-item>
-
-    <ion-item *ngIf="profile.profileType==='user' && profile.platform==='twitter'">
-      <ion-label>Retweets</ion-label>
-      <ion-toggle checked="true"></ion-toggle>
-    </ion-item>
-
-    <ion-item *ngIf="profile.profileType==='user' && profile.platform==='youtube'">
-      <ion-label>Comments</ion-label>
-      <ion-toggle checked="true"></ion-toggle>
-    </ion-item>
-
-    <ion-item *ngIf="profile.profileType==='page' && profile.platform==='googleplus'">
-      <ion-label>Page comments</ion-label>
-      <ion-toggle checked="true"></ion-toggle>
-    </ion-item>
-
-  </ion-list> -->
-
-
   <ion-list>
-    <ion-item *ngIf="profile.platform==='facebook' || profile.platform==='twitter'">
-      <ion-label>Direct Messages</ion-label>
-      <ion-toggle checked="true"></ion-toggle>
+    <ion-item *ngFor="let option of profile.options">
+      <ion-label>
+        {{ option.type }}
+      </ion-label>
+
+      <ion-toggle [(ngModel)]="option.selected">
+      </ion-toggle>
     </ion-item>
-
-    <ion-item *ngIf="profile.platform==='facebook' || profile.platform==='instagram' || profile.platform==='youtube'">
-      <ion-label>Comments</ion-label>
-      <ion-toggle checked="true"></ion-toggle>
-    </ion-item>
-
-
-    <div *ngIf="profile.platform==='facebook'">
-      <ion-item>
-        <ion-label>Likes</ion-label>
-        <ion-toggle checked="true"></ion-toggle>
-      </ion-item>
-
-      <ion-item>
-        <ion-label>Reviews</ion-label>
-        <ion-toggle checked="true"></ion-toggle>
-      </ion-item>
-
-      <ion-item>
-        <ion-label>Shares</ion-label>
-        <ion-toggle checked="true"></ion-toggle>
-      </ion-item>
-
-      <ion-item>
-        <ion-label>Wall Posts</ion-label>
-        <ion-toggle checked="true"></ion-toggle>
-      </ion-item>
-
-      <ion-item>
-        <ion-label>Others</ion-label>
-        <ion-toggle checked="true"></ion-toggle>
-      </ion-item>
-    </div>
-
-
-
-    <div *ngIf="profile.platform==='twitter'">
-      <ion-item>
-        <ion-label>New followers</ion-label>
-        <ion-toggle checked="true"></ion-toggle>
-      </ion-item>
-
-      <ion-item>
-        <ion-label>Mentions</ion-label>
-        <ion-toggle checked="true"></ion-toggle>
-      </ion-item>
-
-      <ion-item>
-        <ion-label>Retweets</ion-label>
-        <ion-toggle checked="true"></ion-toggle>
-      </ion-item>
-    </div>
-
-
-    
-    <ion-item *ngIf="profile.platform==='googleplus'">
-      <ion-label>Page comments</ion-label>
-      <ion-toggle checked="true"></ion-toggle>
-    </ion-item>
-
   </ion-list>
 
 </ion-content>
