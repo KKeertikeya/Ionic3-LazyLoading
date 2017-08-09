@@ -1,4 +1,10 @@
 export default {
+    resetProfiles: true,
+    numberOfSelectedProfiles: 0,
+    resetTypes: true,
+    numberOfSelectedTypes: 0,
+    resetTags: true,
+    numberOfSelectedTags: 0,
     profiles: [
         {
             profileName: 'Kotomatrix',

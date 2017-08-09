@@ -16,8 +16,8 @@ export class InboxFiltersPage implements OnInit {
   // Data declaration
   showMore: boolean = false;
 
-  numberOfSelectedProfiles: number;                       // Keeps track of the number of profiles that are selected for toggling All Profiles
-  numberOfSelectedTypes: number;                          // Keeps track of the number of profiles that are selected for toggling All Types
+  // numberOfSelectedProfiles: number;                       // Keeps track of the number of profiles that are selected for toggling All Profiles
+  // numberOfSelectedTypes: number;                          // Keeps track of the number of profiles that are selected for toggling All Types
   numberOfSelectedTags: number;                           // Keeps track of the number of profiles that are selected for toggling All Tags
   
   filterData: any;                                        // Stores the data for filters
@@ -29,9 +29,9 @@ export class InboxFiltersPage implements OnInit {
   tagsLength: number;                                     // Used for array declaration in the next line
   tags: any[] = new Array(this.tagsLength);               // This array keeps all the tags data 
   
-  allProfiles: boolean;                                     // Used for toggling All profiles
-  allTypes: boolean;                                        // Used for toggling All types
-  disableRemoveAllTags: boolean;                                   // Used for toggling All tags
+  // resetProfiles: boolean;                                 // Used for toggling All profiles
+  // resetTypes: boolean;                                    // Used for toggling All types
+  disableRemoveAllTags: boolean;                          // Used for toggling All tags
 
 
 
@@ -40,12 +40,14 @@ export class InboxFiltersPage implements OnInit {
 
     console.log("----------------Constructor-----------------");
 
-    this.numberOfSelectedProfiles = 0;
-    this.numberOfSelectedTypes = 0;
+    // this.numberOfSelectedProfiles = 0;
+    // this.numberOfSelectedTypes = 0;
     this.numberOfSelectedTags = 0;
 
-    this.allProfiles = true;
-    this.allTypes = false;
+    // this.resetProfiles = true;
+    
+    // this.resetTypes = true;
+    
     // this.removeAllTags = true;
 
     if (this.numberOfSelectedTags === 0) {
@@ -55,6 +57,11 @@ export class InboxFiltersPage implements OnInit {
     }
 
     this.filterData = filterData;
+
+    // added this instead of resetProfiles and resetTypes above
+    // this.resetProfiles = filterData.resetProfiles;
+    // this.resetTypes = filterData.resetTypes;
+
     this.profilesLength = filterData.profiles.length;
     this.typesLength = filterData.types.length;
     this.tagsLength = filterData.tags.length;
@@ -81,10 +88,12 @@ export class InboxFiltersPage implements OnInit {
     and sets the numberOfSelectedProfiles to 0
   */
   selectAllProfiles() {
-    if (this.allProfiles) {
+    filterData.resetProfiles = !filterData.resetProfiles;
+
+    if (filterData.resetProfiles) {
       // console.log("Inside selectAllProfiles()");
 
-      this.numberOfSelectedProfiles = 0;
+      filterData.numberOfSelectedProfiles = 0;
 
       var i: number = 0;
       for (i = 0; i < this.profiles.length; i++) {
@@ -107,21 +116,21 @@ export class InboxFiltersPage implements OnInit {
       If yes, then deselect it.
       Else continue.
     */
-    if (this.allProfiles) {
-      this.allProfiles = false;
+    if (filterData.resetProfiles) {
+      filterData.resetProfiles = false;
     }
 
     // If a profile is selected, increment numberOfSelectedProfiles
     if (this.profiles[i].selected) {
-      this.allProfiles = false;
-      this.numberOfSelectedProfiles++;
+      filterData.resetProfiles = false;
+      filterData.numberOfSelectedProfiles++;
     }
     // If a profile is deselected, increment numberOfSelectedProfiles
     else {
-      this.numberOfSelectedProfiles--;
+      filterData.numberOfSelectedProfiles--;
 
-      if (this.numberOfSelectedProfiles === 0) {
-        this.allProfiles = true;
+      if (filterData.numberOfSelectedProfiles === 0) {
+        filterData.resetProfiles = true;
       }
     }
   }
@@ -136,17 +145,31 @@ export class InboxFiltersPage implements OnInit {
     and sets the numberOfSelectedTypes to 0
   */
   selectAllTypes() {
-    if (this.allTypes) {
+    filterData.resetTypes = !filterData.resetTypes;
+
+    if (filterData.resetTypes) {
+      // console.log("Inside selectAllProfiles()");
+
+      filterData.numberOfSelectedTypes = 0;
+
+      var i: number = 0;
+      for (i = 0; i < this.types.length; i++) {
+        // if (this.profiles[i].selected)
+          this.types[i].selected = false;
+      }
+    }
+
+    /* if (filterData.resetTypes) {
       // console.log("Inside selectAllTypes()");
 
-      this.numberOfSelectedTypes = 0;
+      filterData.numberOfSelectedTypes = 0;
 
       var j: number = 0;
       for (j = 0; j < this.typesLength; j++) {
         // console.log(j);
         this.types[j].selected = true;
       }
-    }
+    } */
   }
 
 
@@ -162,23 +185,45 @@ export class InboxFiltersPage implements OnInit {
       If yes, then deselect it.
       Else continue.
     */
-    if (this.allTypes) {
-      this.allTypes = false;
+
+
+    if (filterData.resetTypes) {
+      filterData.resetTypes = false;
+    }
+
+    // If a profile is selected, increment numberOfSelectedProfiles
+    if (this.types[i].selected) {
+      filterData.resetTypes = false;
+      filterData.numberOfSelectedTypes++;
+    }
+    // If a profile is deselected, increment numberOfSelectedProfiles
+    else {
+      filterData.numberOfSelectedTypes--;
+
+      if (filterData.numberOfSelectedTypes === 0) {
+        filterData.resetTypes = true;
+      }
+    }
+
+
+
+    /* if (filterData.resetTypes) {
+      filterData.resetTypes = false;
     }
 
     // If a type is selected, increment numberOfSelectedTypes
     if (this.types[i].selected) {
 
-      this.numberOfSelectedTypes++;
+      filterData.numberOfSelectedTypes++;
     }
     // If a type is deselected, increment numberOfSelectedTypes
     else {
-      this.numberOfSelectedTypes--;
+      filterData.numberOfSelectedTypes--;
 
-      if (this.numberOfSelectedTypes === 0) {
-        this.allTypes = false;
+      if (filterData.numberOfSelectedTypes === 0) {
+        filterData.resetTypes = false;
       }
-    }
+    } */
   }
 
 
@@ -215,7 +260,31 @@ export class InboxFiltersPage implements OnInit {
       If yes, then deselect it.
       Else continue.
     */
-    if (this.numberOfSelectedProfiles === 0) {
+
+
+
+    if (filterData.resetTags) {
+      filterData.resetTags = false;
+    }
+
+    // If a profile is selected, increment numberOfSelectedProfiles
+    if (this.tags[i].selected) {
+      filterData.resetTags = false;
+      filterData.numberOfSelectedTags++;
+    }
+    // If a profile is deselected, increment numberOfSelectedProfiles
+    else {
+      filterData.numberOfSelectedTags--;
+
+      if (filterData.numberOfSelectedTags === 0) {
+        filterData.resetTags = true;
+      }
+    }
+
+
+
+    /* 
+    if (filterData.numberOfSelectedProfiles === 0) {
       this.disableRemoveAllTags = true;
     }
 
@@ -231,8 +300,35 @@ export class InboxFiltersPage implements OnInit {
       if (this.numberOfSelectedTags === 0) {
         this.disableRemoveAllTags = true;
       }
+    } */
+  }
+
+
+  resetTags() {
+    filterData.resetTags = !filterData.resetTags;
+
+    if (filterData.resetTypes) {
+      // console.log("Inside selectAllProfiles()");
+
+      filterData.numberOfSelectedTags = 0;
+
+      var i: number = 0;
+      for (i = 0; i < this.tags.length; i++) {
+        // if (this.profiles[i].selected)
+          this.tags[i].selected = false;
+      }
     }
   }
+
+
+
+
+  goToInboxTagsPage() {
+    this.navCtrl.push("InboxTagsPage");
+  }
+
+
+
 
 
   filterSaveButton() {

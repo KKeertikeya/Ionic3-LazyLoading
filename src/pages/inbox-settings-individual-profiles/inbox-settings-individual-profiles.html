@@ -10,10 +10,10 @@
 <ion-content>
   <ion-item>
     <ion-label>Add this profile to inbox</ion-label>
-    <ion-toggle item-end></ion-toggle>
+    <ion-toggle [(ngModel)]="addProfile" item-end (click)="toggleAddProfile()"></ion-toggle>
   </ion-item>
 
-  <ion-item-divider color="light">Select items</ion-item-divider>
+  <ion-item-divider color="light">Selected items will be will be displayed in your Inbox</ion-item-divider>
 
   <!-- <ion-list>
     <ion-item *ngIf="profile.profileType==='page' && profile.platform==='facebook'">
@@ -160,6 +160,6 @@
 
 
 <ion-footer style="padding: 8px 0 8px 0">
-  <button ion-button clear no-margin style="width:49%">Save</button>
-  <button ion-button clear no-margin style="width:49%">Cancel</button>
+  <button ion-button clear no-margin style="width:49%" (click)="saveIndividualSettings()">Save</button>
+  <button ion-button clear no-margin style="width:49%" (click)="cancelIndividualSettings()">Cancel</button>
 </ion-footer>

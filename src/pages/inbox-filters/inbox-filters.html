@@ -11,14 +11,22 @@
 
   <!-- ============== Profiles Toggle ============= -->
   <ion-item-divider color="light">
-    <ion-toggle
+    <!-- <ion-toggle
       item-end
-      [(ngModel)]='allProfiles'
+      [(ngModel)]='resetProfiles'
       (click)='selectAllProfiles()'
-      [disabled]="allProfiles"
+      [disabled]="resetProfiles"
     >
-    </ion-toggle>
-    <ion-label>Profiles filter</ion-label>
+    </ion-toggle> -->
+    
+    <p>
+      Profiles filter
+    </p>
+    <button ion-button item-end clear [disabled]="filterData.resetProfiles" (click)="selectAllProfiles()">
+      Reset
+    </button>
+
+    <!-- <ion-label>Profiles filter</ion-label> -->
     
   </ion-item-divider>
 
@@ -63,14 +71,21 @@
 
   <!-- ============== Types Toggle ============= -->
   <ion-item-divider color="light">
-    <ion-toggle
+    <!-- <ion-toggle
       item-end
       [(ngModel)]="allTypes"
       (click)='selectAllTypes()'
       [disabled]='allTypes'
     >
     </ion-toggle>
-    <ion-label>Types filter</ion-label>
+    <ion-label>Types filter</ion-label> -->
+
+    <p>
+      Types filter
+    </p>
+    <button ion-button item-end clear [disabled]="filterData.resetTypes" (click)="selectAllTypes()">
+      Reset
+    </button>
   </ion-item-divider>
 
   <!-- Show all types -->
@@ -129,8 +144,8 @@
     >
   </ion-toggle> -->
     <p>Tags filter</p>
-    <button ion-button clear item-end>EDIT</button>
-    <button ion-button clear item-end>CLEAR</button>
+    <button ion-button clear item-end (click)="goToInboxTagsPage()">EDIT</button>
+    <button ion-button clear item-end [disabled]="filterData.resetTags" (click)="resetTags()">CLEAR</button>
     <!-- <ion-label>Tags filter</ion-label> -->
   </ion-item-divider>
 
