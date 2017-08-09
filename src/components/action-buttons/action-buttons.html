@@ -3,23 +3,23 @@
   <!-- ------------------------- ReplyCombined button ------------------------- -->
 
   <!-- Complete Item -->
-  <ion-segment-button icon-only *ngIf='message.actionButtons.completeItem' (click)='showCompleteItemAlert()'>
+  <ion-segment-button icon-only *ngIf='message.actionButtons.completeItem' (click)='showCompleteItemAlert()' style="font-size: 0.5em">
     <ion-icon name="checkmark" color='icons'></ion-icon>
   </ion-segment-button>
 
   <!-- viewLatestConversation -->
-  <ion-segment-button icon-only *ngIf='message.actionButtons.viewLatestConversation' (click)="viewLatestConversation('convo001')">
+  <!-- <ion-segment-button icon-only *ngIf='message.actionButtons.viewLatestConversation' (click)="viewLatestConversation('convo001')">
     <ion-icon name="eye" color='icons'></ion-icon>
-  </ion-segment-button>
+  </ion-segment-button> -->
     
   <!-- TWSendDirectMessage -->
   <ion-segment-button icon-only *ngIf='message.actionButtons.TWSendDirectMessage' (click)="replyToPost()">
-    <ion-icon name="mail" color='icons'></ion-icon>
+    <ion-icon name="mail" color='icons' color='icons'></ion-icon>
   </ion-segment-button>
   
   <!-- FBSendDirectMessage -->
   <ion-segment-button icon-only *ngIf='message.actionButtons.FBSendDirectMessage' (click)="replyToPost()">
-    <ion-icon name="mail" color='icons'></ion-icon>
+    <ion-icon name="mail" color='icons' style="font-size: 1em"></ion-icon>
   </ion-segment-button>
   
   <!-- TWReply -->
@@ -93,3 +93,7 @@
   </ion-segment-button>
 
 </ion-segment>
+
+<button ion-button full small clear icon-only no-margin color="icons" *ngIf='message.actionButtons.viewLatestConversation' (click)="viewLatestConversation('convo001')">
+  View conversation
+</button>
