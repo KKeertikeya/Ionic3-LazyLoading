@@ -20,6 +20,9 @@ import { InboxSearchPipeModule } from '../../pipes/inboxSearchPipe.module';
 // import { InboxSearch } from '../../pipes/inboxSearch.pipe';
 
 
+
+
+
 @NgModule({
   declarations: [
     InboxPage

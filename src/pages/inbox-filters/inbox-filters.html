@@ -11,22 +11,12 @@
 
   <!-- ============== Profiles Toggle ============= -->
   <ion-item-divider color="light">
-    <!-- <ion-toggle
-      item-end
-      [(ngModel)]='resetProfiles'
-      (click)='selectAllProfiles()'
-      [disabled]="resetProfiles"
-    >
-    </ion-toggle> -->
-    
     <p>
       Profiles filter
     </p>
     <button ion-button item-end clear [disabled]="filterData.resetProfiles" (click)="selectAllProfiles()">
       Reset
     </button>
-
-    <!-- <ion-label>Profiles filter</ion-label> -->
     
   </ion-item-divider>
 
@@ -44,6 +34,7 @@
           </ion-item>
         </ion-card>
 
+        <!-- To display remaining profiles -->
         <ion-card *ngIf="i > 5 && showMore" [style.display]="showMore" no-padding style="margin: 8px 0 0 8px ;padding-left: 8px; width: 47%">
           <ion-item no-padding no-margin>
             <ion-label color="dark" stacked>
@@ -122,18 +113,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
   <!-- ============== Tags Toggle ============= -->
   <ion-item-divider color="light">
     <!-- <ion-toggle
@@ -142,11 +121,12 @@
       (click)='removeAllTagsMethod()'
       [disabled]='disableRemoveAllTags'
     >
-  </ion-toggle> -->
+  </ion-toggle>
+  <ion-label>Tags filter</ion-label> 
+  -->
     <p>Tags filter</p>
     <button ion-button clear item-end (click)="goToInboxTagsPage()">EDIT</button>
     <button ion-button clear item-end [disabled]="filterData.resetTags" (click)="resetTags()">CLEAR</button>
-    <!-- <ion-label>Tags filter</ion-label> -->
   </ion-item-divider>
 
   <!-- Show all tags -->
